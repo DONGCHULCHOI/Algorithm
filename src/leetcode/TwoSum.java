@@ -8,6 +8,7 @@ public class TwoSum {
         // T.C: O(n)
         // S.C: O(n) *1)
         // 1) The extra space required depends on the number of items stored in the hash table, which stores at most n elements
+        // assume that each input would have exactly one solution
         Map<Integer, Integer> map = new HashMap<>();
         for(int i=0; i<nums.length; i++){
             int complement = target - nums[i]; // ***
