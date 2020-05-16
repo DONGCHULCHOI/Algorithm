@@ -1,6 +1,7 @@
 package com.company;
 
 import leetcode.ThreeSum;
+import leetcode.ThreeSumClosest;
 import leetcode.TwoSum;
 import leetcode.TwoSumII;
 
@@ -23,8 +24,6 @@ public class Main {
         for (int elem : output){
             System.out.print(elem + " ");
         }
-*/
-/*
         // ThreeSum
         ThreeSum threeSum = new ThreeSum();
         List<List<Integer>> output = threeSum.threeSum(new int[]{-1, 0, 1, 2, -1, -4});
@@ -34,6 +33,10 @@ public class Main {
             }
             System.out.println();
         }
+        // ThreeSumClosest
+        ThreeSumClosest threeSumClosest = new ThreeSumClosest();
+        int output = threeSumClosest.threeSumClosest(new int[]{-1, 2, 1, -4},1);
+        System.out.println(output);
 */
 
     }
