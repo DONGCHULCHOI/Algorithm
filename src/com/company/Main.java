@@ -41,6 +41,11 @@ public class Main {
         // RomanToInteger
         RomanToInteger romanToInteger = new RomanToInteger();
         System.out.println(romanToInteger.romanToInt("MCMXCIV"));
-*/        
+
+        // IntegerToRoman
+        IntegerToRoman integerToRoman = new IntegerToRoman();
+        System.out.println(integerToRoman.intToRoman(58));
+ */
+
     }
 }
