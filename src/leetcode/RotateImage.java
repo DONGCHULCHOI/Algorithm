@@ -4,6 +4,7 @@ public class RotateImage {
     public int[][] rotate(int[][] matrix) {
         // T.C: O(N^2)
         // S.C: O(1)
+        // assume N * N array
         // transpose matrix -> reverse each row
         int n = matrix.length;
 
