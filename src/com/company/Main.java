@@ -73,7 +73,12 @@ public class Main {
         // FirstUniqueCharacterInString
         FirstUniqueCharacterInString firstUniqueCharacterInString = new FirstUniqueCharacterInString();
         System.out.println(firstUniqueCharacterInString.firstUniqChar("loveleetcode"));
-        */
+
+        // LongestSubstringWithoutRepeatingCharacters
+        LongestSubstringWithoutRepeatingCharacters longestSubstringWithoutRepeatingCharacters = new LongestSubstringWithoutRepeatingCharacters();
+        System.out.println(longestSubstringWithoutRepeatingCharacters.lengthOfLongestSubstring("abcabcbb"));
+
+         */
         
     }
 }
