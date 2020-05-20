@@ -58,7 +58,7 @@ public class Main {
         int[][] output = rotateImage.rotate(new int[][]{{1,2,3},{4,5,6},{7,8,9}});
         for(int[] elemArr : output){
             for(int elemVar : elemArr){
-                System.out.printf(elemVar+" ");
+                System.out.print(elemVar+" ");
             }
             System.out.println();
         }
@@ -68,11 +68,12 @@ public class Main {
 
         // TrappingRainWater
         TrappingRainWater trappingRainWater = new TrappingRainWater();
-        System.out.printf(trappingRainWater.trap(new int[]{0,1,0,2,1,0,1,3,2,1,2,1}) + " ");
-         */
+        System.out.print(trappingRainWater.trap(new int[]{0,1,0,2,1,0,1,3,2,1,2,1}) + " ");
+
+        // FirstUniqueCharacterInString
+        FirstUniqueCharacterInString firstUniqueCharacterInString = new FirstUniqueCharacterInString();
+        System.out.println(firstUniqueCharacterInString.firstUniqChar("loveleetcode"));
+        */
         
-
-
-
     }
 }
