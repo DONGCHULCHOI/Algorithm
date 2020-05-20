@@ -65,7 +65,14 @@ public class Main {
         // ContainerWithMostWater
         ContainerWithMostWater containerWithMostWater = new ContainerWithMostWater();
         System.out.println(containerWithMostWater.maxArea(new int[]{1,8,6,2,5,4,8,3,7}));
-        */
+
+        // TrappingRainWater
+        TrappingRainWater trappingRainWater = new TrappingRainWater();
+        System.out.printf(trappingRainWater.trap(new int[]{0,1,0,2,1,0,1,3,2,1,2,1}) + " ");
+         */
         
+
+
+
     }
 }
