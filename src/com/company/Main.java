@@ -85,7 +85,12 @@ public class Main {
         // ImplementStrStr
         ImplementStrStr implementStrStr = new ImplementStrStr();
         System.out.println(implementStrStr.strStr("hello", "ll"));
+
+        // ValidParentheses
+        ValidParentheses validParentheses = new ValidParentheses();
+        System.out.println(validParentheses.isValid("([)]"));
         */
-         
+
+
     }
 }
