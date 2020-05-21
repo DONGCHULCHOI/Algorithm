@@ -3,7 +3,7 @@ package leetcode;
 import java.util.HashMap;
 import java.util.Map;
 
-public class FirstUniqueCharacterInString {
+public class FirstUniqueCharacterInAString {
     public int firstUniqChar(String s) {
         // T.C: O(N), N is the length of string
         // S.C: O(N)

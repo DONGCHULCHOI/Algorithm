@@ -71,14 +71,16 @@ public class Main {
         System.out.print(trappingRainWater.trap(new int[]{0,1,0,2,1,0,1,3,2,1,2,1}) + " ");
 
         // FirstUniqueCharacterInString
-        FirstUniqueCharacterInString firstUniqueCharacterInString = new FirstUniqueCharacterInString();
-        System.out.println(firstUniqueCharacterInString.firstUniqChar("loveleetcode"));
+        FirstUniqueCharacterInAString firstUniqueCharacterInAString = new FirstUniqueCharacterInAString();
+        System.out.println(firstUniqueCharacterInAString.firstUniqChar("loveleetcode"));
 
         // LongestSubstringWithoutRepeatingCharacters
         LongestSubstringWithoutRepeatingCharacters longestSubstringWithoutRepeatingCharacters = new LongestSubstringWithoutRepeatingCharacters();
         System.out.println(longestSubstringWithoutRepeatingCharacters.lengthOfLongestSubstring("abcabcbb"));
 
-         */
-        
+        // StringToInteger
+        StringToInteger stringToInteger = new StringToInteger();
+        System.out.println(stringToInteger.myAtoi("4193 with words"));
+        */
     }
 }
