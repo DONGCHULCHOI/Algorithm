@@ -81,6 +81,11 @@ public class Main {
         // StringToInteger
         StringToInteger stringToInteger = new StringToInteger();
         System.out.println(stringToInteger.myAtoi("4193 with words"));
+
+        // ImplementStrStr
+        ImplementStrStr implementStrStr = new ImplementStrStr();
+        System.out.println(implementStrStr.strStr("hello", "ll"));
         */
+         
     }
 }
