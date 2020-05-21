@@ -3,6 +3,7 @@ package com.company;
 import leetcode.*;
 
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Main {
@@ -89,8 +90,12 @@ public class Main {
         // ValidParentheses
         ValidParentheses validParentheses = new ValidParentheses();
         System.out.println(validParentheses.isValid("([)]"));
-        */
 
+        // MissingNumber
+        MissingNumber missingNumber = new MissingNumber();
+        System.out.println(missingNumber.missingNumber(new int[]{9,6,4,2,3,5,7,0,1}));
+
+         */
 
     }
 }
