@@ -2,6 +2,8 @@ package leetcode;
 
 public class StringToInteger {
     public int myAtoi(String str) {
+        // T.C: O(N) where N is the length of the str
+        // S.C: O(1)
         int i = 0, sign = 1, total = 0;
         // no such sequence exists: empty
         if(str.length() == 0){

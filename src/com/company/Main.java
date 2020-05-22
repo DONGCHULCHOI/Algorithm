@@ -107,18 +107,17 @@ public class Main {
         // MostCommonWord
         MostCommonWord mostCommonWord = new MostCommonWord();
         System.out.println(mostCommonWord.mostCommonWord("Bob hit a ball, the hit BALL flew far after it was hit.", new String[]{"hit"}));
-        */
+
+        // ReorderDataInLogFiles
+        ReorderDataInLogFiles reorderDataInLogFiles = new ReorderDataInLogFiles();
+        String[] output = reorderDataInLogFiles.reorderLogFiles(new String[]{"dig1 8 1 5 1","let1 art can","dig2 3 6","let2 own kit dig","let3 art zero"});
+        for (String elem : output){
+            System.out.print(elem + " ");
+        }
         
-
-
-
-
-
-
-
-
-
+         */
 
 
     }
 }
+
