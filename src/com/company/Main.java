@@ -2,9 +2,7 @@ package com.company;
 
 import leetcode.*;
 
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class Main {
 
@@ -95,7 +93,25 @@ public class Main {
         MissingNumber missingNumber = new MissingNumber();
         System.out.println(missingNumber.missingNumber(new int[]{9,6,4,2,3,5,7,0,1}));
 
-         */
+        // GroupAnagrams
+        GroupAnagrams groupAnagrams = new GroupAnagrams();
+        List<List<String>> output = groupAnagrams.groupAnagrams(new String[]{"eat", "tea", "tan", "ate", "nat", "bat"});
+        for(List<String> elem : output){
+            System.out.println(elem);
+        }
+        */
+         
+
+
+
+
+
+
+
+
+
+
+
 
     }
 }
