@@ -99,10 +99,12 @@ public class Main {
         for(List<String> elem : output){
             System.out.println(elem);
         }
-        */
-         
 
+        // CompareVersionNumbers
+        CompareVersionNumbers compareVersionNumbers = new CompareVersionNumbers();
+        System.out.println(compareVersionNumbers.compareVersion("1.0.1", "1"));
 
+         */
 
 
 
