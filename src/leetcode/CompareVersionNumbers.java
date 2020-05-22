@@ -9,8 +9,8 @@ public class CompareVersionNumbers {
             // Version strings do not start or end with dots, and they will not be two consecutive dots
 
             // Two pass
-            // T.C: O(N+M+max(N,M)) where NN and MM are lengths of input strings
-            // S.C: O(N+M) to store arrays nums1 and nums2
+            // T.C: O(N+M+max(N,M)) where N and M are lengths of input strings
+            // S.C: O(N+M) to store arrays nums1 and nums2 // ***
             // If one of the arrays is shorter, virtually add as many zeros as needed to continue to compare with the longer array
             String[] nums1 = version1.split("\\."); // ***
             String[] nums2 = version2.split("\\.");
