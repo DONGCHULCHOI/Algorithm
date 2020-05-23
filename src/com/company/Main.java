@@ -145,6 +145,20 @@ public class Main {
             System.out.print(output.val + " ");
             output = output.next;
         }
+
+        // ReverseLinkedList
+        ReverseLinkedList reverseLinkedList = new ReverseLinkedList();
+        ListNode l = new ListNode(1);
+        l.next = new ListNode(2);
+        l.next.next = new ListNode(3);
+        l.next.next.next = new ListNode(4);
+        l.next.next.next.next = new ListNode(5);
+        ListNode output = reverseLinkedList.reverseList(l);
+        while(output != null){
+            System.out.print(output.val + " ");
+            output = output.next;
+        }
+        
          */
 
     }
