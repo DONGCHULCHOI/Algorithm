@@ -158,8 +158,26 @@ public class Main {
             System.out.print(output.val + " ");
             output = output.next;
         }
-        
+
+        // CopyListWithRandomPointer
+        CopyListWithRandomPointer copyListWithRandomPointer = new CopyListWithRandomPointer();
+
+        Node l = new Node(3);
+        l.random = null;
+        l.next = new Node(3);
+        l.next.random = l;
+        l.next.next = new Node(3);
+        l.next.next.random = null;
+        l.next.next.next = null;
+
+        Node output = copyListWithRandomPointer.copyRandomList(l);
+        while(output != null){
+            System.out.print("["+output.val+","+output.random+"]" + " ");
+            output = output.next;
+        }
+
          */
+        
 
     }
 }
