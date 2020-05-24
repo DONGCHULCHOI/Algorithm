@@ -175,7 +175,7 @@ public class Main {
             System.out.print("["+output.val+","+output.random+"]" + " ");
             output = output.next;
         }
-
+*/
         // inorder / preorder / postorder traversal of binary tree
         TreeNode root = new TreeNode(0);
         root.left = new TreeNode(1);
@@ -187,8 +187,8 @@ public class Main {
         System.out.println();
         root.postOrderTraversal(root);
         System.out.println();
-        
-         */
+        System.out.println(root.maxDepth(root)); // == height
+
     }
 }
 

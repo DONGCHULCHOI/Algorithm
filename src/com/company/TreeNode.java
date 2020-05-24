@@ -13,30 +13,37 @@ public class TreeNode {
         this.right = right;
     }
 
-    public void inOrderTraversal(TreeNode treeNode){
-        if(treeNode == null){
+    public void inOrderTraversal(TreeNode node){
+        if(node == null){
             return;
         }
-        inOrderTraversal(treeNode.left);
-        System.out.print(treeNode.val + " "); // visit(node)
-        inOrderTraversal(treeNode.right);
+        inOrderTraversal(node.left);
+        System.out.print(node.val + " "); // visit(node)
+        inOrderTraversal(node.right);
     }
 
-    public void preOrderTraversal(TreeNode treeNode){
-        if(treeNode == null){
+    public void preOrderTraversal(TreeNode node){
+        if(node == null){
             return;
         }
-        System.out.print(treeNode.val + " "); // visit(node)
-        preOrderTraversal(treeNode.left);
-        preOrderTraversal(treeNode.right);
+        System.out.print(node.val + " "); // visit(node)
+        preOrderTraversal(node.left);
+        preOrderTraversal(node.right);
     }
 
-    public void postOrderTraversal(TreeNode treeNode){
-        if(treeNode == null){
+    public void postOrderTraversal(TreeNode node){
+        if(node == null){
             return;
         }
-        postOrderTraversal(treeNode.left);
-        postOrderTraversal(treeNode.right);
-        System.out.print(treeNode.val + " "); // visit(node)
+        postOrderTraversal(node.left);
+        postOrderTraversal(node.right);
+        System.out.print(node.val + " "); // visit(node)
+    }
+    
+    public int maxDepth(TreeNode node){ // == height
+        if(node == null){
+            return 0;
+        }
+        return Math.max(maxDepth(node.left), maxDepth(node.right)) + 1;
     }
 }
