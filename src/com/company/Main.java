@@ -176,9 +176,19 @@ public class Main {
             output = output.next;
         }
 
-         */
+        // inorder / preorder / postorder traversal of binary tree
+        TreeNode root = new TreeNode(0);
+        root.left = new TreeNode(1);
+        root.right = new TreeNode(2);
+        root.left.left = new TreeNode(3);
+        root.inOrderTraversal(root);
+        System.out.println();
+        root.preOrderTraversal(root);
+        System.out.println();
+        root.postOrderTraversal(root);
+        System.out.println();
         
-
+         */
     }
 }
 
