@@ -41,6 +41,9 @@ public class TreeNode {
     }
     
     public int maxDepth(TreeNode node){ // == height
+        // Maximum Depth of Binary Tree in leetcode
+        // T.C: O(N)
+        // S.C: O(N)
         if(node == null){
             return 0;
         }
