@@ -3,6 +3,7 @@ package leetcode;
 import com.company.TreeNode;
 
 public class DiameterOfBinaryTree {
+    // consider converting from recursion to iteration next time
     // use Maximum Depth of Binary Tree
     // T.C: O(N)
     // S.C: O(N)

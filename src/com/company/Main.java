@@ -197,8 +197,18 @@ public class Main {
         root.left.left = new TreeNode(4);
         root.left.right = new TreeNode(5);
         System.out.println(diameterOfBinaryTree.diameterOfBinaryTree(root));
-        
+
          */
+        // SymmetricTree
+        SymmetricTree symmetricTree = new SymmetricTree();
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(2);
+        root.left.left = new TreeNode(3);
+        root.left.right = new TreeNode(4);
+        root.right.left = new TreeNode(4);
+        root.right.right = new TreeNode(3);
+        System.out.println(symmetricTree.isSymmetric(root));
 
     }
 }
