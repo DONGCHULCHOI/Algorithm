@@ -38,6 +38,7 @@ public class BinaryTreeLevelOrderTraversal {
         // iteration - BFS
         // T.C: O(N) since each node is processed exactly once // ***
         // S.C: O(N)
+        // Use level
         // (!) level starts with 0
         if(root == null){
             return levels;

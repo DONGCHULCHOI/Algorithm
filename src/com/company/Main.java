@@ -217,9 +217,17 @@ public class Main {
         root.right.left = new TreeNode(15);
         root.right.right = new TreeNode(7);
         System.out.println(binaryTreeLevelOrderTraversal.levelOrder(root));
+
+        // BinaryTreeZigzagLevelOrderTraversal
+        BinaryTreeZigzagLevelOrderTraversal binaryTreeZigzagLevelOrderTraversal = new BinaryTreeZigzagLevelOrderTraversal();
+        TreeNode root = new TreeNode(3);
+        root.left = new TreeNode(9);
+        root.right = new TreeNode(20);
+        root.right.left = new TreeNode(15);
+        root.right.right = new TreeNode(7);
+        System.out.println(binaryTreeZigzagLevelOrderTraversal.zigzagLevelOrder(root));
         
          */
-
 
     }
 }
