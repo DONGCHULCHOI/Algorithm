@@ -226,6 +226,15 @@ public class Main {
         root.right.left = new TreeNode(15);
         root.right.right = new TreeNode(7);
         System.out.println(binaryTreeZigzagLevelOrderTraversal.zigzagLevelOrder(root));
+
+        // ValidateBinarySearchTree
+        ValidateBinarySearchTree validateBinarySearchTree = new ValidateBinarySearchTree();
+        TreeNode root = new TreeNode(5);
+        root.left = new TreeNode(1);
+        root.right = new TreeNode(4);
+        root.right.left = new TreeNode(3);
+        root.right.right = new TreeNode(6);
+        System.out.println(validateBinarySearchTree.isValidBST(root));
         
          */
 
