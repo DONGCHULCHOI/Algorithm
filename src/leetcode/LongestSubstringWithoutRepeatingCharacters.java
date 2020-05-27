@@ -28,5 +28,5 @@ public class LongestSubstringWithoutRepeatingCharacters {
         return ans;
     }
     // 1) we need O(k)O(k) space for checking a substring has no duplicate characters, where kk is the size of the Set.
-    // The size of the Set is upper bounded by the size of the string nn and the size of the charset/alphabet mm.
+    // The size of the Set is upper bounded by the size of the string n and the size of the charset/alphabet m.
 }

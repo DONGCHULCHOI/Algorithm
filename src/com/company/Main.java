@@ -198,7 +198,6 @@ public class Main {
         root.left.right = new TreeNode(5);
         System.out.println(diameterOfBinaryTree.diameterOfBinaryTree(root));
 
-         */
         // SymmetricTree
         SymmetricTree symmetricTree = new SymmetricTree();
         TreeNode root = new TreeNode(1);
@@ -209,6 +208,18 @@ public class Main {
         root.right.left = new TreeNode(4);
         root.right.right = new TreeNode(3);
         System.out.println(symmetricTree.isSymmetric(root));
+
+        // BinaryTreeLevelOrderTraversal
+        BinaryTreeLevelOrderTraversal binaryTreeLevelOrderTraversal = new BinaryTreeLevelOrderTraversal();
+        TreeNode root = new TreeNode(3);
+        root.left = new TreeNode(9);
+        root.right = new TreeNode(20);
+        root.right.left = new TreeNode(15);
+        root.right.right = new TreeNode(7);
+        System.out.println(binaryTreeLevelOrderTraversal.levelOrder(root));
+        
+         */
+
 
     }
 }
