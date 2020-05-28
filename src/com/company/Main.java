@@ -235,8 +235,25 @@ public class Main {
         root.right.left = new TreeNode(3);
         root.right.right = new TreeNode(6);
         System.out.println(validateBinarySearchTree.isValidBST(root));
+
+        // LowestCommonAncestorOfABinaryTree
+        LowestCommonAncestorOfABinaryTree lowestCommonAncestorOfABinaryTree = new LowestCommonAncestorOfABinaryTree();
+        TreeNode root = new TreeNode(3);
+        root.left = new TreeNode(5);
+        root.right = new TreeNode(1);
+        root.left.left = new TreeNode(6);
+        root.left.right = new TreeNode(2);
+        root.right.left = new TreeNode(0);
+        root.right.right = new TreeNode(8);
+        root.left.right.left = new TreeNode(7);
+        root.left.right.right = new TreeNode(4);
+        TreeNode p = root.left; // ans
+        TreeNode q = root.left.right.right;
+        System.out.println(p);
+        System.out.println(lowestCommonAncestorOfABinaryTree.lowestCommonAncestor(root, p, q));
         
          */
+
 
     }
 }
