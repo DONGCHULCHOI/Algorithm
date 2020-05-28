@@ -251,6 +251,16 @@ public class Main {
         TreeNode q = root.left.right.right;
         System.out.println(p);
         System.out.println(lowestCommonAncestorOfABinaryTree.lowestCommonAncestor(root, p, q));
+
+        // FloodFill
+        FloodFill floodFill = new FloodFill();
+        int[][] output = floodFill.floodFill(new int[][]{{1,1,1},{1,1,0},{1,0,1}}, 1, 1, 2);
+        for(int[] elemArr : output){
+            for(int elem : elemArr){
+                System.out.print(elem + " ");
+            }
+            System.out.println();
+        }
         
          */
 

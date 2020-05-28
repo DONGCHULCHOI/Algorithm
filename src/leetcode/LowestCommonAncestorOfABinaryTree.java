@@ -6,6 +6,8 @@ public class LowestCommonAncestorOfABinaryTree {
     // Consider iteration later
     private TreeNode ans;
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+        // T.C: O(N)
+        // S.C: O(N)
         // Use DFS; post order
         // The flag helps to determine if we found the required nodes in any of the paths
         // The least common ancestor would then be the node for which both the subtree recursions return a True flag
