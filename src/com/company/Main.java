@@ -264,16 +264,12 @@ public class Main {
 
         // WordLadder
         WordLadder wordLadder = new WordLadder();
-        List<String> input = new ArrayList<>();
-        input.add("hot");
-        input.add("dot");
-        input.add("dog");
-        input.add("lot");
-        input.add("log");
-        input.add("cog");
+        List<String> input = Arrays.asList(new String[]{"hot","dot","dog","lot","log","cog"});
         System.out.println(wordLadder.ladderLength("hit","cog",input));
-        
+
          */
+
+
 
 
     }
