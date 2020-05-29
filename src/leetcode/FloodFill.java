@@ -17,8 +17,8 @@ public class FloodFill {
         // visit
         image[r][c] = newColor;
         // if not visited, do recursion for neighbors
-        if (r >= 1 && image[r-1][c] != newColor) dfs(image, r-1, c, color, newColor); // order & index bound // *****
-        if (c >= 1 && image[r][c-1] != newColor)  dfs(image, r, c-1, color, newColor); // *****
+        if (r-1 >= 0 && image[r-1][c] != newColor) dfs(image, r-1, c, color, newColor); // order & index bound // *****
+        if (c-1 >= 0 && image[r][c-1] != newColor)  dfs(image, r, c-1, color, newColor); // *****
         if (r+1 < image.length && image[r+1][c] != newColor) dfs(image, r+1, c, color, newColor); // *****
         if (c+1 < image[0].length && image[r][c+1] != newColor) dfs(image, r, c+1, color, newColor); // *****
     }

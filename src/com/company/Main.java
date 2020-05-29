@@ -267,10 +267,11 @@ public class Main {
         List<String> input = Arrays.asList(new String[]{"hot","dot","dog","lot","log","cog"});
         System.out.println(wordLadder.ladderLength("hit","cog",input));
 
-         */
-
-
-
+        // NumberOfIslands
+        NumberOfIslands numberOfIslands = new NumberOfIslands();
+        char[][] input = new char[][]{{'1','1','0','0','0'},{'1','1','0','0','0'},{'0','0','1','0','0'},{'0','0','0','1','1'}};
+        System.out.println(numberOfIslands.numIslands(input));
+ */
 
     }
 }
