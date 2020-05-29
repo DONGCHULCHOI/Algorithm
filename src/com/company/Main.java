@@ -271,8 +271,13 @@ public class Main {
         NumberOfIslands numberOfIslands = new NumberOfIslands();
         char[][] input = new char[][]{{'1','1','0','0','0'},{'1','1','0','0','0'},{'0','0','1','0','0'},{'0','0','0','1','1'}};
         System.out.println(numberOfIslands.numIslands(input));
- */
 
+        // CourseSchedule
+        CourseSchedule courseSchedule = new CourseSchedule();
+        int[][] prerequisites = new int[][]{{1,0},{0,1}};
+        System.out.println(courseSchedule.canFinish(2, prerequisites));
+        */
+         
     }
 }
 
