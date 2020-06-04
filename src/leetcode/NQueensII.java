@@ -2,6 +2,8 @@ package leetcode;
 
 public class NQueensII {
     public int totalNQueens(int n) {
+        // T.C: O(N!) // *1)
+        // S.C: O(N)
         // rows and cols
         int[] rows = new int[n];
         // "hill" diagonals
@@ -45,4 +47,5 @@ public class NQueensII {
         }
         return count;
     }
+    // 1)  There is N possibilities to put the first queen, not more than N (N - 2) to put the second one, not more than N(N - 2)(N - 4) for the third one etc. In total that results in O(N!) time complexity.
 }

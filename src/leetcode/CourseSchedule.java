@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 public class CourseSchedule {
+    // N-queens II first
     // Consider backtracking first, master it
     // Consider the time complexity of backtracing first
     // Consider other approaches later
