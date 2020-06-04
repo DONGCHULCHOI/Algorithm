@@ -281,10 +281,16 @@ public class Main {
         NQueensII nQueensII = new NQueensII();
         System.out.println(nQueensII.totalNQueens(4));
 
+        // WordSearch
+        WordSearch wordSearch = new WordSearch();
+        char[][] input = {
+                {'A','B','C','E'},
+                {'S','F','C','S'},
+                {'A','D','E','E'}
+        };
+        System.out.println(wordSearch.exist(input, "ABCCED"));
+        
          */
-
-
     }
-
 }
 
