@@ -13,14 +13,14 @@ public class GenerateParentheses {
         return ans;
     }
     public void backtrack(List<String> ans, String curr, int open, int close, int max){
-        if(curr.length() == 2*max){ // 2*max == the whole length of the pairs on string
+        if(curr.length() == 2*max){ // ***** // base case & for the output // 2*max == the whole length of the pairs on string
             ans.add(curr);
             return;
         }
-        if(open < max){
+        if(open < max){ // *****
             backtrack(ans, curr+"(", open+1, close, max);
         }
-        if(close < open){
+        if(close < open){ // *****
             backtrack(ans, curr+")", open, close+1, max);
         }
     }

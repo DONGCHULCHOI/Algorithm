@@ -293,8 +293,15 @@ public class Main {
         // GenerateParentheses
         GenerateParentheses generateParentheses = new GenerateParentheses();
         System.out.println(generateParentheses.generateParenthesis(3));
+
+        // LetterCombinationsOfAPhoneNumber
+        LetterCombinationsOfAPhoneNumber letterCombinationsOfAPhoneNumber = new LetterCombinationsOfAPhoneNumber();
+        System.out.println(letterCombinationsOfAPhoneNumber.letterCombinations("23"));
         
          */
     }
+
 }
+
+
 
