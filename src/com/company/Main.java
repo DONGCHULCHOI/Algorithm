@@ -289,6 +289,10 @@ public class Main {
                 {'A','D','E','E'}
         };
         System.out.println(wordSearch.exist(input, "ABCCED"));
+
+        // GenerateParentheses
+        GenerateParentheses generateParentheses = new GenerateParentheses();
+        System.out.println(generateParentheses.generateParenthesis(3));
         
          */
     }
