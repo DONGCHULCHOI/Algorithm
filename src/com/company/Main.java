@@ -276,8 +276,15 @@ public class Main {
         CourseSchedule courseSchedule = new CourseSchedule();
         int[][] prerequisites = new int[][]{{1,0},{0,1}};
         System.out.println(courseSchedule.canFinish(2, prerequisites));
-        */
-         
+
+        // NQueensII
+        NQueensII nQueensII = new NQueensII();
+        System.out.println(nQueensII.totalNQueens(4));
+
+         */
+
+
     }
+
 }
 
