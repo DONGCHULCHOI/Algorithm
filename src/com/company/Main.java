@@ -301,11 +301,21 @@ public class Main {
         // SearchInRotatedSortedArray
         SearchInRotatedSortedArray searchInRotatedSortedArray = new SearchInRotatedSortedArray();
         System.out.println(searchInRotatedSortedArray.search(new int[]{4,5,6,7,0,1,2}, 0));
-        
-         */
+
+        // MergeIntervals
+        MergeIntervals mergeIntervals = new MergeIntervals();
+        int[][] input = new int[][]{{1,3},{2,6},{8,10},{15,18}};
+        int[][] output = mergeIntervals.merge(input);
+        for (int[] elem : output){
+            System.out.print(Arrays.toString(elem) + ", ");
+        }
+        */
+         
 
     }
+
 }
+
 
 
 
