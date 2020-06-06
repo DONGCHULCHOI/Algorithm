@@ -297,11 +297,18 @@ public class Main {
         // LetterCombinationsOfAPhoneNumber
         LetterCombinationsOfAPhoneNumber letterCombinationsOfAPhoneNumber = new LetterCombinationsOfAPhoneNumber();
         System.out.println(letterCombinationsOfAPhoneNumber.letterCombinations("23"));
+
+        // SearchInRotatedSortedArray
+        SearchInRotatedSortedArray searchInRotatedSortedArray = new SearchInRotatedSortedArray();
+        System.out.println(searchInRotatedSortedArray.search(new int[]{4,5,6,7,0,1,2}, 0));
         
          */
-    }
 
+    }
 }
+
+
+
 
 
 
