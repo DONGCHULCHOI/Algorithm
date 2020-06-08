@@ -321,7 +321,14 @@ public class Main {
         // KthLargestElementInAnArray
         KthLargestElementInAnArray kthLargestElementInAnArray = new KthLargestElementInAnArray();
         System.out.println(kthLargestElementInAnArray.findKthLargest(new int[]{3,2,1,5,6,4}, 2));
-        
+
+        // KClosestPointsToOrigin
+        KClosestPointsToOrigin kClosestPointsToOrigin = new KClosestPointsToOrigin();
+        int[][] output = kClosestPointsToOrigin.kClosest(new int[][]{{3,3},{5,-1},{-2,4}}, 2);
+        for (int[] elem : output){
+            System.out.print(Arrays.toString(elem)+ ", ");
+        }
+
          */
 
 
