@@ -329,8 +329,14 @@ public class Main {
             System.out.print(Arrays.toString(elem)+ ", ");
         }
 
-         */
+        // Fibonacci
+        Fibonacci fibonacci = new Fibonacci();
+        System.out.println(fibonacci.fibonacci(5));
+        System.out.println(fibonacci.fibonacciTopDown(5));
+        System.out.println(fibonacci.fibonacciBottomUp(5));
+        System.out.println(fibonacci.fibonacciBottomUpImproved(5));
 
+         */
 
     }
 }
