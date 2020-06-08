@@ -317,6 +317,10 @@ public class Main {
         // TopKFrequentElements
         TopKFrequentElements topKFrequentElements = new TopKFrequentElements();
         System.out.println(Arrays.toString(topKFrequentElements.topKFrequent(new int[]{1,1,1,2,2,3}, 2)));
+
+        // KthLargestElementInAnArray
+        KthLargestElementInAnArray kthLargestElementInAnArray = new KthLargestElementInAnArray();
+        System.out.println(kthLargestElementInAnArray.findKthLargest(new int[]{3,2,1,5,6,4}, 2));
         
          */
 
