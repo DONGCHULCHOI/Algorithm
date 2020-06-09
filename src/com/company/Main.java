@@ -343,6 +343,10 @@ public class Main {
         // BestTimeToBuyAndSellStock
         BestTimeToBuyAndSellStock bestTimeToBuyAndSellStock = new BestTimeToBuyAndSellStock();
         System.out.println(bestTimeToBuyAndSellStock.maxProfit(new int[]{7,1,5,3,6,4}));
+
+        // CoinChange
+        CoinChange coinChange = new CoinChange();
+        System.out.println(coinChange.coinChange(new int[]{1, 2, 5}, 11));
         
          */
     }
