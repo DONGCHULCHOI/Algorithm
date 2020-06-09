@@ -336,8 +336,15 @@ public class Main {
         System.out.println(fibonacci.fibonacciBottomUp(5));
         System.out.println(fibonacci.fibonacciBottomUpImproved(5));
 
-         */
+        // MaximumSubarray
+        MaximumSubarray maximumSubarray = new MaximumSubarray();
+        System.out.println(maximumSubarray.maxSubArray(new int[]{-2,1,-3,4,-1,2,1,-5,4}));
 
+        // BestTimeToBuyAndSellStock
+        BestTimeToBuyAndSellStock bestTimeToBuyAndSellStock = new BestTimeToBuyAndSellStock();
+        System.out.println(bestTimeToBuyAndSellStock.maxProfit(new int[]{7,1,5,3,6,4}));
+        
+         */
     }
 }
 
