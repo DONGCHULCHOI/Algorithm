@@ -1,5 +1,6 @@
 package com.company;
 
+import javafx.scene.chart.Axis;
 import leetcode.*;
 
 import java.util.*;
@@ -366,7 +367,15 @@ public class Main {
         System.out.println(minStack.top());    // return 0
         System.out.println(minStack.getMin()); // return -2
 
+        // TicTacToe
+        TicTacToe ticTacToe = new TicTacToe(2);
+        System.out.println(ticTacToe.move(0,1,1));
+        System.out.println(ticTacToe.move(1,1,2));
+        System.out.println(ticTacToe.move(1,0,1));
+        
          */
+
+
     }
 }
 
