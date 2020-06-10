@@ -351,6 +351,10 @@ public class Main {
         // WordBreak
         WordBreak wordBreak = new WordBreak();
         System.out.println(wordBreak.wordBreak("leetcode", Arrays.asList(new String[]{"leet", "code"})));
+
+        // LongestPalindromicSubstring
+        LongestPalindromicSubstring longestPalindromicSubstring = new LongestPalindromicSubstring();
+        System.out.println(longestPalindromicSubstring.longestPalindrome("babad"));
         
          */
     }
