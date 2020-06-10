@@ -372,6 +372,10 @@ public class Main {
         System.out.println(ticTacToe.move(0,1,1));
         System.out.println(ticTacToe.move(1,1,2));
         System.out.println(ticTacToe.move(1,0,1));
+
+        // ReverseInteger
+        ReverseInteger reverseInteger = new ReverseInteger();
+        System.out.println(reverseInteger.reverse(123));
         
          */
 
