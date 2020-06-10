@@ -376,18 +376,23 @@ public class Main {
         // ReverseInteger
         ReverseInteger reverseInteger = new ReverseInteger();
         System.out.println(reverseInteger.reverse(123));
-        
+
+        // LRUCache
+        LRUCache lruCache = new LRUCache(2);
+        lruCache.put(1, 1);
+        lruCache.put(2, 2);
+        System.out.println(lruCache.get(1));       // returns 1
+        lruCache.put(3, 3);    // evicts key 2
+        System.out.println(lruCache.get(2));       // returns -1 (not found)
+        lruCache.put(4, 4);    // evicts key 1
+        System.out.println(lruCache.get(1));       // returns -1 (not found)
+        System.out.println(lruCache.get(3));       // returns 3
+        System.out.println(lruCache.get(4));       // returns 4
+
          */
+
 
 
     }
 }
-
-
-
-
-
-
-
-
 
