@@ -347,6 +347,10 @@ public class Main {
         // CoinChange
         CoinChange coinChange = new CoinChange();
         System.out.println(coinChange.coinChange(new int[]{1, 2, 5}, 11));
+
+        // WordBreak
+        WordBreak wordBreak = new WordBreak();
+        System.out.println(wordBreak.wordBreak("leetcode", Arrays.asList(new String[]{"leet", "code"})));
         
          */
     }
