@@ -393,7 +393,13 @@ public class Main {
         PartitionLabels partitionLabels = new PartitionLabels();
         System.out.println(partitionLabels.partitionLabels("ababcbacadefegdehijhklij"));
 
+        // PrisonCellsAfterNDays
+        PrisonCellsAfterNDays prisonCellsAfterNDays = new PrisonCellsAfterNDays();
+        System.out.println(Arrays.toString(prisonCellsAfterNDays.prisonAfterNDays(new int[]{0,1,0,1,1,0,0,1}, 7)));
+        
          */
+
+
 
     }
 }
