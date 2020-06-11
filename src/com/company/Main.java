@@ -396,7 +396,11 @@ public class Main {
         // PrisonCellsAfterNDays
         PrisonCellsAfterNDays prisonCellsAfterNDays = new PrisonCellsAfterNDays();
         System.out.println(Arrays.toString(prisonCellsAfterNDays.prisonAfterNDays(new int[]{0,1,0,1,1,0,0,1}, 7)));
-        
+
+        // MaximizeDistanceToClosestPerson
+        MaximizeDistanceToClosestPerson maximizeDistanceToClosestPerson = new MaximizeDistanceToClosestPerson();
+        System.out.println(maximizeDistanceToClosestPerson.maxDistToClosest(new int[]{1,0,0,0,1,0,1}));
+
          */
 
 
