@@ -404,9 +404,12 @@ public class Main {
         // PlusOne
         PlusOne plusOne = new PlusOne();
         System.out.println(Arrays.toString(plusOne.plusOne(new int[]{1,2,3})));
-        
-         */
 
+        // BackspaceStringCompare
+        BackspaceStringCompare backspaceStringCompare = new BackspaceStringCompare();
+        System.out.println(backspaceStringCompare.backspaceCompare("ab#c", "ad#c"));
+
+         */
 
 
     }
