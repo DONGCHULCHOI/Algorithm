@@ -389,9 +389,11 @@ public class Main {
         System.out.println(lruCache.get(3));       // returns 3
         System.out.println(lruCache.get(4));       // returns 4
 
+        // PartitionLabels
+        PartitionLabels partitionLabels = new PartitionLabels();
+        System.out.println(partitionLabels.partitionLabels("ababcbacadefegdehijhklij"));
+
          */
-
-
 
     }
 }
