@@ -401,6 +401,10 @@ public class Main {
         MaximizeDistanceToClosestPerson maximizeDistanceToClosestPerson = new MaximizeDistanceToClosestPerson();
         System.out.println(maximizeDistanceToClosestPerson.maxDistToClosest(new int[]{1,0,0,0,1,0,1}));
 
+        // PlusOne
+        PlusOne plusOne = new PlusOne();
+        System.out.println(Arrays.toString(plusOne.plusOne(new int[]{1,2,3})));
+        
          */
 
 
