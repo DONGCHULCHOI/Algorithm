@@ -409,6 +409,10 @@ public class Main {
         BackspaceStringCompare backspaceStringCompare = new BackspaceStringCompare();
         System.out.println(backspaceStringCompare.backspaceCompare("ab#c", "ad#c"));
 
+        // NextPermutation
+        NextPermutation nextPermutation = new NextPermutation();
+        System.out.println(Arrays.toString(nextPermutation.nextPermutation(new int[]{1,2,3})));
+
          */
 
 

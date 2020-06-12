@@ -4,6 +4,8 @@ public class BackspaceStringCompare {
     public boolean backspaceCompare(String S, String T) {
         // T.C: O(M+N) where M, N are the lengths of S and T
         // S.C: O(1)
+        // skip the char which will be deleted // *****
+        // then compare char vs char // *****
         int i = S.length() - 1;
         int j = T.length() - 1;
         int skipS = 0, skipT = 0;
