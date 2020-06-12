@@ -413,6 +413,10 @@ public class Main {
         NextPermutation nextPermutation = new NextPermutation();
         System.out.println(Arrays.toString(nextPermutation.nextPermutation(new int[]{1,2,3})));
 
+        // MultiplyStrings
+        MultiplyStrings multiplyStrings = new MultiplyStrings();
+        System.out.println(multiplyStrings.multiply("19","3"));
+        
          */
 
 
