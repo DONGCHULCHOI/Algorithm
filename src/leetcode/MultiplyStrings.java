@@ -5,6 +5,7 @@ public class MultiplyStrings {
     public String multiply(String num1, String num2) {
         // T.C: O(max(mn, m+n) where the m is the length of num1, n is the length of num2
         // S.C: O(m+n)
+        // https://leetcode.com/problems/multiply-strings/discuss/17608/AC-solution-in-Java-with-explanation
         // make a product array which is num1.length() + num2.length() length of arr // *****
         // fill the arr from end to start // *****
         // use carry, from end to start in product arr, adjust the carries of digits // *****

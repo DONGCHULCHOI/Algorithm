@@ -416,10 +416,17 @@ public class Main {
         // MultiplyStrings
         MultiplyStrings multiplyStrings = new MultiplyStrings();
         System.out.println(multiplyStrings.multiply("19","3"));
+
+        // MissingRanges
+        MissingRanges missingRanges = new MissingRanges();
+        System.out.println(missingRanges.findMissingRanges(new int[]{0, 1, 3, 50, 75}, 0, 99));
         
          */
 
 
     }
+    
 }
+
+
 
