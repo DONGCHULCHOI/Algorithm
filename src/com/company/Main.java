@@ -424,7 +424,11 @@ public class Main {
         // NextClosestTime
         NextClosestTime nextClosestTime = new NextClosestTime();
         System.out.println(nextClosestTime.nextClosestTime("19:34"));
-        
+
+        // FindAndReplaceInString
+        FindAndReplaceInString findAndReplaceInString = new FindAndReplaceInString();
+        System.out.println(findAndReplaceInString.findReplaceString("abcd", new int[]{0,2}, new String[]{"a","cd"}, new String[]{"eee","ffff"}));
+
          */
 
 
