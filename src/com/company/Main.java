@@ -429,6 +429,10 @@ public class Main {
         FindAndReplaceInString findAndReplaceInString = new FindAndReplaceInString();
         System.out.println(findAndReplaceInString.findReplaceString("abcd", new int[]{0,2}, new String[]{"a","cd"}, new String[]{"eee","ffff"}));
 
+        // ExpressiveWords
+        ExpressiveWords expressiveWords = new ExpressiveWords();
+        System.out.println(expressiveWords.expressiveWords("heeellooo", new String[]{"hello", "hi", "helo"}));
+        
          */
 
 
