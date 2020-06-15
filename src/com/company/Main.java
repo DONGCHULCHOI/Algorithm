@@ -437,8 +437,11 @@ public class Main {
         LongestSubstringWithAtMostTwoDistinctCharacters longestSubstringWithAtMostTwoDistinctCharacters = new LongestSubstringWithAtMostTwoDistinctCharacters();
         System.out.println(longestSubstringWithAtMostTwoDistinctCharacters.lengthOfLongestSubstringTwoDistinct("eceba"));
 
+        // JumpGame
+        JumpGame jumpGame = new JumpGame();
+        System.out.println(jumpGame.canJump(new int[]{2,3,1,1,4}));
+        
          */
-
 
     }
     
