@@ -432,7 +432,11 @@ public class Main {
         // ExpressiveWords
         ExpressiveWords expressiveWords = new ExpressiveWords();
         System.out.println(expressiveWords.expressiveWords("heeellooo", new String[]{"hello", "hi", "helo"}));
-        
+
+        // LongestSubstringWithAtMostTwoDistinctCharacters
+        LongestSubstringWithAtMostTwoDistinctCharacters longestSubstringWithAtMostTwoDistinctCharacters = new LongestSubstringWithAtMostTwoDistinctCharacters();
+        System.out.println(longestSubstringWithAtMostTwoDistinctCharacters.lengthOfLongestSubstringTwoDistinct("eceba"));
+
          */
 
 
