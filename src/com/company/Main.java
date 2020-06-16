@@ -454,6 +454,10 @@ public class Main {
             output = output.next;
         }
 
+        // DecodeString
+        DecodeString decodeString = new DecodeString();
+        System.out.println(decodeString.decodeString("3[a]2[bc]"));
+        
          */
 
     }

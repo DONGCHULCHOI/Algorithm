@@ -7,6 +7,7 @@ public class RemoveNthNodeFromEndOfList {
         // One pass
         // T.C: O(L) because The algorithm makes one traversal of the list of L nodes
         // S.C: O(1)
+        // keep distance n between first and second ptrs // *****
         ListNode dummy = new ListNode();
         dummy.next = head;
         ListNode first = dummy;
