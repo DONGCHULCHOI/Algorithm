@@ -440,7 +440,20 @@ public class Main {
         // JumpGame
         JumpGame jumpGame = new JumpGame();
         System.out.println(jumpGame.canJump(new int[]{2,3,1,1,4}));
-        
+
+        // RemoveNthNodeFromEndOfList
+        RemoveNthNodeFromEndOfList removeNthNodeFromEndOfList = new RemoveNthNodeFromEndOfList();
+        ListNode head = new ListNode(1);
+        head.next = new ListNode(2);
+        head.next.next = new ListNode(3);
+        head.next.next.next = new ListNode(4);
+        head.next.next.next.next = new ListNode(5);
+        ListNode output = removeNthNodeFromEndOfList.removeNthFromEnd(head, 2);
+        while(output != null){
+            System.out.println(output.val);
+            output = output.next;
+        }
+
          */
 
     }
