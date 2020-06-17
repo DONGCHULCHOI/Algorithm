@@ -457,6 +457,10 @@ public class Main {
         // DecodeString
         DecodeString decodeString = new DecodeString();
         System.out.println(decodeString.decodeString("3[a]2[bc]"));
+
+        // CourseScheduleII
+        CourseScheduleII courseScheduleII = new CourseScheduleII();
+        System.out.println(Arrays.toString(courseScheduleII.findOrder(4, new int[][]{{1,0},{2,0},{3,1},{3,2}})));
         
          */
 
