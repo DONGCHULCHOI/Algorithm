@@ -1,5 +1,6 @@
 package com.company;
 
+import com.sun.source.tree.Tree;
 import javafx.scene.chart.Axis;
 import leetcode.*;
 
@@ -461,8 +462,19 @@ public class Main {
         // CourseScheduleII
         CourseScheduleII courseScheduleII = new CourseScheduleII();
         System.out.println(Arrays.toString(courseScheduleII.findOrder(4, new int[][]{{1,0},{2,0},{3,1},{3,2}})));
+
+        // CountCompleteTreeNodes
+        CountCompleteTreeNodes countCompleteTreeNodes = new CountCompleteTreeNodes();
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(3);
+        root.left.left = new TreeNode(4);
+        root.left.right = new TreeNode(5);
+        root.right.left = new TreeNode(6);
+        System.out.println(countCompleteTreeNodes.countNodes(root));
         
          */
+
 
     }
     
