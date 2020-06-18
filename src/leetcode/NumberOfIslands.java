@@ -26,9 +26,8 @@ public class NumberOfIslands {
     private void dfs(char[][] grid, int row, int col){
         // No need to mark visited // *****
         // because when visited, the value becomes 0, and the 0 means visited
-        if(grid[row][col] == '0'){
-            return;
-        }
+        // we don't need a base case here because num of islands calculated in main function, and there, we send unvisited row, col // *****
+
         // visit
         grid[row][col] = '0';
         // if not visited, do recursion for neighbors

@@ -514,9 +514,13 @@ public class Main {
         // UniqueEmailAddresses
         UniqueEmailAddresses uniqueEmailAddresses = new UniqueEmailAddresses();
         System.out.println(uniqueEmailAddresses.numUniqueEmails(new String[]{"test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"}));
+
+        // MostStonesRemovedWithSameRowOrColumn
+        MostStonesRemovedWithSameRowOrColumn mostStonesRemovedWithSameRowOrColumn = new MostStonesRemovedWithSameRowOrColumn();
+        System.out.println(mostStonesRemovedWithSameRowOrColumn.removeStones(new int[][]{{0,0},{0,1},{1,0},{1,2},{2,1},{2,2}
+        }));
         
          */
-
 
 
     }
