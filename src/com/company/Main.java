@@ -472,7 +472,45 @@ public class Main {
         root.left.right = new TreeNode(5);
         root.right.left = new TreeNode(6);
         System.out.println(countCompleteTreeNodes.countNodes(root));
-        
+
+        // EvaluateDivision
+        EvaluateDivision evaluateDivision = new EvaluateDivision();
+        List<List<String>> equations = new ArrayList<>();
+        List<String> tmp = new ArrayList<>();
+        tmp.add("a");
+        tmp.add("b");
+        equations.add(tmp);
+        List<String> tmp2 = new ArrayList<>();
+        tmp2.add("b");
+        tmp2.add("c");
+        equations.add(tmp2);
+
+        double[] values = new double[]{2.0, 3.0};
+
+        List<List<String>> queries = new ArrayList<>();
+        List<String> tmp3 = new ArrayList<>();
+        tmp3.add("a");
+        tmp3.add("c");
+        queries.add(tmp3);
+        List<String> tmp4 = new ArrayList<>();
+        tmp4.add("b");
+        tmp4.add("a");
+        queries.add(tmp4);
+        List<String> tmp5 = new ArrayList<>();
+        tmp5.add("a");
+        tmp5.add("e");
+        queries.add(tmp5);
+        List<String> tmp6 = new ArrayList<>();
+        tmp6.add("a");
+        tmp6.add("a");
+        queries.add(tmp6);
+        List<String> tmp7 = new ArrayList<>();
+        tmp7.add("x");
+        tmp7.add("x");
+        queries.add(tmp7);
+
+        System.out.println(Arrays.toString(evaluateDivision.calcEquation(equations, values, queries)));
+
          */
 
 
