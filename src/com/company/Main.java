@@ -511,7 +511,12 @@ public class Main {
 
         System.out.println(Arrays.toString(evaluateDivision.calcEquation(equations, values, queries)));
 
+        // UniqueEmailAddresses
+        UniqueEmailAddresses uniqueEmailAddresses = new UniqueEmailAddresses();
+        System.out.println(uniqueEmailAddresses.numUniqueEmails(new String[]{"test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"}));
+        
          */
+
 
 
     }
