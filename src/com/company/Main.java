@@ -2,6 +2,7 @@ package com.company;
 
 import com.sun.source.tree.Tree;
 import javafx.scene.chart.Axis;
+import javafx.util.Pair;
 import leetcode.*;
 
 import java.util.*;
@@ -519,8 +520,12 @@ public class Main {
         MostStonesRemovedWithSameRowOrColumn mostStonesRemovedWithSameRowOrColumn = new MostStonesRemovedWithSameRowOrColumn();
         System.out.println(mostStonesRemovedWithSameRowOrColumn.removeStones(new int[][]{{0,0},{0,1},{1,0},{1,2},{2,1},{2,2}
         }));
-        
+
          */
+        String tmp = "a,a,a";
+
+
+        System.out.println(Arrays.toString(tmp.split(",")));
 
 
     }
