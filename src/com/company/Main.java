@@ -543,7 +543,16 @@ public class Main {
 
         System.out.println(flipEquivalentBinaryTrees.flipEquiv(root1, root2));
 
+        // LicenseKeyFormatting
+        LicenseKeyFormatting licenseKeyFormatting = new LicenseKeyFormatting();
+        System.out.println(licenseKeyFormatting.licenseKeyFormatting("5F3Z-2e-9-w", 4));
+
+        // FruitIntoBaskets
+        FruitIntoBaskets fruitIntoBaskets = new FruitIntoBaskets();
+        System.out.println(fruitIntoBaskets.totalFruit(new int[]{1,2,1}));
+
          */
+        
 
 
     }
