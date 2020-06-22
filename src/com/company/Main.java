@@ -551,9 +551,11 @@ public class Main {
         FruitIntoBaskets fruitIntoBaskets = new FruitIntoBaskets();
         System.out.println(fruitIntoBaskets.totalFruit(new int[]{1,2,1}));
 
-         */
+        // AndroidUnlockPatterns
+        AndroidUnlockPatterns androidUnlockPatterns = new AndroidUnlockPatterns();
+        System.out.println(androidUnlockPatterns.calcPatterns(3,4));
         
-
+         */
 
     }
     
