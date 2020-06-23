@@ -554,6 +554,14 @@ public class Main {
         // AndroidUnlockPatterns
         AndroidUnlockPatterns androidUnlockPatterns = new AndroidUnlockPatterns();
         System.out.println(androidUnlockPatterns.calcPatterns(3,4));
+
+        // StrobogrammaticNumberII
+        StrobogrammaticNumberII strobogrammaticNumberII = new StrobogrammaticNumberII();
+        System.out.println(strobogrammaticNumberII.findStrobogrammatic(3));
+
+        // StrobogrammaticNumber
+        StrobogrammaticNumber strobogrammaticNumber = new StrobogrammaticNumber();
+        System.out.println(strobogrammaticNumber.isStrobogrammatic("69"));
         
          */
 
