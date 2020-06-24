@@ -562,6 +562,14 @@ public class Main {
         // StrobogrammaticNumber
         StrobogrammaticNumber strobogrammaticNumber = new StrobogrammaticNumber();
         System.out.println(strobogrammaticNumber.isStrobogrammatic("69"));
+
+        // ValidAnagram
+        ValidAnagram validAnagram = new ValidAnagram();
+        System.out.println(validAnagram.isAnagram("anagram", "nagaram"));
+
+        // PeakIndexInAMountainArray
+        PeakIndexInAMountainArray peakIndexInAMountainArray = new PeakIndexInAMountainArray();
+        System.out.println(peakIndexInAMountainArray.peakIndexInMountainArray(new int[]{0,2,1,0}));
         
          */
 
