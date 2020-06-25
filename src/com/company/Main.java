@@ -575,10 +575,16 @@ public class Main {
         FindFirstAndLastPositionOfElementInSortedArray findFirstAndLastPositionOfElementInSortedArray = new FindFirstAndLastPositionOfElementInSortedArray();
         System.out.println(Arrays.toString(findFirstAndLastPositionOfElementInSortedArray.searchRange(new int[]{5,7,7,8,8,10}, 8)));
 
+        // LoggerRateLimiter
+        LoggerRateLimiter loggerRateLimiter = new LoggerRateLimiter();
+        System.out.println(loggerRateLimiter.shouldPrintMessage(1, "foo"));
+        System.out.println(loggerRateLimiter.shouldPrintMessage(2, "bar"));
+        System.out.println(loggerRateLimiter.shouldPrintMessage(5, "foo"));
+        System.out.println(loggerRateLimiter.shouldPrintMessage(11, "foo"));
+        System.out.println(loggerRateLimiter.shouldPrintMessage(13, "bar"));
+        System.out.println(loggerRateLimiter.shouldPrintMessage(13, "bar"));
+
          */
-
-
-
     }
     
 }
