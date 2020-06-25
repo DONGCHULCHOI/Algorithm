@@ -570,8 +570,14 @@ public class Main {
         // PeakIndexInAMountainArray
         PeakIndexInAMountainArray peakIndexInAMountainArray = new PeakIndexInAMountainArray();
         System.out.println(peakIndexInAMountainArray.peakIndexInMountainArray(new int[]{0,2,1,0}));
-        
+
+        // FindFirstAndLastPositionOfElementInSortedArray
+        FindFirstAndLastPositionOfElementInSortedArray findFirstAndLastPositionOfElementInSortedArray = new FindFirstAndLastPositionOfElementInSortedArray();
+        System.out.println(Arrays.toString(findFirstAndLastPositionOfElementInSortedArray.searchRange(new int[]{5,7,7,8,8,10}, 8)));
+
          */
+
+
 
     }
     
