@@ -584,6 +584,10 @@ public class Main {
         System.out.println(loggerRateLimiter.shouldPrintMessage(13, "bar"));
         System.out.println(loggerRateLimiter.shouldPrintMessage(13, "bar"));
 
+        // IsomorphicStrings
+        IsomorphicStrings isomorphicStrings = new IsomorphicStrings();
+        System.out.println(isomorphicStrings.isIsomorphic("egg","add"));
+        
          */
     }
     
