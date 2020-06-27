@@ -587,7 +587,11 @@ public class Main {
         // IsomorphicStrings
         IsomorphicStrings isomorphicStrings = new IsomorphicStrings();
         System.out.println(isomorphicStrings.isIsomorphic("egg","add"));
-        
+
+        // BullsAndCows
+        BullsAndCows bullsAndCows = new BullsAndCows();
+        System.out.println(bullsAndCows.getHint("1807","7810"));
+
          */
     }
     
