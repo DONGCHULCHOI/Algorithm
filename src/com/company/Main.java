@@ -592,6 +592,10 @@ public class Main {
         BullsAndCows bullsAndCows = new BullsAndCows();
         System.out.println(bullsAndCows.getHint("1807","7810"));
 
+        // JewelsAndStones
+        JewelsAndStones jewelsAndStones = new JewelsAndStones();
+        System.out.println(jewelsAndStones.numJewelsInStones("aA","aAAbbbb"));
+        
          */
     }
     
