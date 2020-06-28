@@ -595,6 +595,12 @@ public class Main {
         // JewelsAndStones
         JewelsAndStones jewelsAndStones = new JewelsAndStones();
         System.out.println(jewelsAndStones.numJewelsInStones("aA","aAAbbbb"));
+
+        // InsertDeleteGetRandomOOf1
+        InsertDeleteGetRandomOOf1 insertDeleteGetRandomOOf1 = new InsertDeleteGetRandomOOf1();
+        System.out.println(insertDeleteGetRandomOOf1.insert(1));
+        System.out.println(insertDeleteGetRandomOOf1.getRandom());
+        System.out.println(insertDeleteGetRandomOOf1.remove(1));
         
          */
     }
