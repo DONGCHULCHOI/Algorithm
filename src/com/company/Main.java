@@ -614,6 +614,10 @@ public class Main {
         // MinimumAreaRectangle
         MinimumAreaRectangle minimumAreaRectangle = new MinimumAreaRectangle();
         System.out.println(minimumAreaRectangle.minAreaRect(new int[][]{{1,1},{1,3},{3,1},{3,3},{2,2}}));
+
+        // SwapAdjacentInLRString
+        SwapAdjacentInLRString swapAdjacentInLRString = new SwapAdjacentInLRString();
+        System.out.println(swapAdjacentInLRString.canTransform("RXXLRXRXL", "XRLXXRRLX"));
         
          */
 
