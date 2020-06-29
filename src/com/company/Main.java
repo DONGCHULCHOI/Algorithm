@@ -601,8 +601,22 @@ public class Main {
         System.out.println(insertDeleteGetRandomOOf1.insert(1));
         System.out.println(insertDeleteGetRandomOOf1.getRandom());
         System.out.println(insertDeleteGetRandomOOf1.remove(1));
+
+        // MyCalendarII
+        MyCalendarII myCalendarII = new MyCalendarII();
+        System.out.println(myCalendarII.book(10, 20));
+        System.out.println(myCalendarII.book(50, 60));
+        System.out.println(myCalendarII.book(10, 40));
+        System.out.println(myCalendarII.book(5, 15));
+        System.out.println(myCalendarII.book(5, 10));
+        System.out.println(myCalendarII.book(25, 55));
+
+        // MinimumAreaRectangle
+        MinimumAreaRectangle minimumAreaRectangle = new MinimumAreaRectangle();
+        System.out.println(minimumAreaRectangle.minAreaRect(new int[][]{{1,1},{1,3},{3,1},{3,3},{2,2}}));
         
          */
+
     }
     
 }
