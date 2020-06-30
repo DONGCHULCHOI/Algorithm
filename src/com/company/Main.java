@@ -618,6 +618,10 @@ public class Main {
         // SwapAdjacentInLRString
         SwapAdjacentInLRString swapAdjacentInLRString = new SwapAdjacentInLRString();
         System.out.println(swapAdjacentInLRString.canTransform("RXXLRXRXL", "XRLXXRRLX"));
+
+        // MaximumProductSubarray
+        MaximumProductSubarray maximumProductSubarray = new MaximumProductSubarray();
+        System.out.println(maximumProductSubarray.maxProduct(new int[]{2,3,-2,4}));
         
          */
 
