@@ -622,7 +622,7 @@ public class Main {
         // MaximumProductSubarray
         MaximumProductSubarray maximumProductSubarray = new MaximumProductSubarray();
         System.out.println(maximumProductSubarray.maxProduct(new int[]{2,3,-2,4}));
-        
+
          */
 
     }
