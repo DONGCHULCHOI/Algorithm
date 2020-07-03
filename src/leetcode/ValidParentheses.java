@@ -14,12 +14,12 @@ public class ValidParentheses {
         // when opening bracket, push on to the stack
         // when closing bracket, pop from the stack, and compare the top with the opening bracket of the closing bracket
         // finally, check whether the size of stack is 0 or not, if not, then it means there is un-matched pairs in the string
-        Map<Character, Character> map = new HashMap<>();
+        Map<Character, Character> map = new HashMap<>(); // *****
         map.put('}','{');
         map.put(')','(');
         map.put(']','[');
 
-        Stack<Character> stack = new Stack<>(); // ***
+        Stack<Character> stack = new Stack<>(); // *****
 
         for(int i=0; i<s.length(); i++){
             char c = s.charAt(i);
