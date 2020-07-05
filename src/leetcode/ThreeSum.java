@@ -34,7 +34,7 @@ public class ThreeSum {
             else if(sum > 0){ // hi < nums.length-1 && nums[hi] == nums[hi+1]) -> don't have to deal with it, because the above did it // *****
                 hi--;
             }
-            else{ // compared to Two Sum II, it should be located here because there is no return, which triggers Time Exceeded
+            else{ // prevent the repeition // compared to Two Sum II, it should be located here because there is no return, which triggers Time Exceeded
                 res.add(Arrays.asList(nums[i], nums[lo++], nums[hi--])); // *****
             }
         }
