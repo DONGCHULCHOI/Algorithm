@@ -80,9 +80,9 @@ public class Main {
         LongestSubstringWithoutRepeatingCharacters longestSubstringWithoutRepeatingCharacters = new LongestSubstringWithoutRepeatingCharacters();
         System.out.println(longestSubstringWithoutRepeatingCharacters.lengthOfLongestSubstring("abcabcbb"));
 
-        // StringToInteger
-        StringToInteger stringToInteger = new StringToInteger();
-        System.out.println(stringToInteger.myAtoi("4193 with words"));
+        // StringToIntegerAtoi
+        StringToIntegerAtoi stringToIntegerAtoi = new StringToIntegerAtoi();
+        System.out.println(stringToIntegerAtoi.myAtoi("4193 with words"));
 
         // ImplementStrStr
         ImplementStrStr implementStrStr = new ImplementStrStr();
