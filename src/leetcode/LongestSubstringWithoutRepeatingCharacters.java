@@ -4,29 +4,27 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class LongestSubstringWithoutRepeatingCharacters {
+    // T.C: O(n) where n is the length of string s
+    // S.C: O(m) where m is the size of the charset
+    // Follow the substring template
+    // the valid window is when one redundant char pair occurs
+    // Valid is counter = 1
     public int lengthOfLongestSubstring(String s) {
-        // (!) try to solve approach 3 next time
-        // T.C: O(n) because O(2n)=O(n). In the worst case each character will be visited twice by i and j
-        // S.C: O(min(m,n)) *1)
-        // sliding window [i,j)
-        // first, i, j start with same pos
-        // then, try to expand j as many as possible adding a character in the set
-        // when j reaches its maximum, then i moves to j removing the character in the set
-        // repeat
-        int n = s.length();
-        Set<Character> set = new HashSet<>();
-        int ans = 0, i = 0, j = 0;
-        while(i < n && j < n){ // ***
-            if(!set.contains(s.charAt(j))){ // ***
-                set.add(s.charAt(j++)); // ***
-                ans = Math.max(ans, j-i); // ***
+        int[] map = new int[128];
+        int counter = 0, begin = 0, end = 0, maxLen = 0;
+
+        while (end < s.length()) { // Find a valid window
+            if (map[s.charAt(end)] > 0) counter++;
+            map[s.charAt(end)]++;
+            end++;
+
+            while (counter > 0) { // Contract till the window becomes invalid
+                if (map[s.charAt(begin)] > 1)   counter--;
+                map[s.charAt(begin)]--;
+                begin++;
             }
-            else{
-                set.remove(s.charAt(i++)); // ***
-            }
+            maxLen = Math.max(maxLen, end - begin); // ***** // because finding maximum substring
         }
-        return ans;
+        return maxLen;
     }
-    // 1) we need O(k)O(k) space for checking a substring has no duplicate characters, where kk is the size of the Set.
-    // The size of the Set is upper bounded by the size of the string n and the size of the charset/alphabet m.
 }

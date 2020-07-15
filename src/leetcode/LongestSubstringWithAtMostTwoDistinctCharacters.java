@@ -4,30 +4,25 @@ import java.util.Collections;
 import java.util.HashMap;
 
 public class LongestSubstringWithAtMostTwoDistinctCharacters {
+    // T.C: O(n) where n is the length of string s
+    // S.C: O(m) where m is the size of the charset
+    // the valid window is when the window includes 3 different char type
+    // Valid is counter = 3
     public int lengthOfLongestSubstringTwoDistinct(String s) {
-        // T.C: O(N) where N is a number of characters in the input string.
-        // S.C: O(1) since additional space is used only for a hashmap with at most 3 elements
-        // move sliding window along the string, keep not more than 2 distinct characters in the window,
-        // and update max substring length at each step
-        // hashmap containing all characters in the sliding window as keys and their rightmost positions as values.
-        // At each moment, this hashmap could contain not more than 3 elements
-        int n = s.length();
-        if(n < 3)
-            return n;
+        int[] map = new int[128];
+        int counter = 0, start = 0, end = 0, maxLen = 0;
 
-        int left = 0;
-        int right = 0;
-        int maxLen = 2; // min
-        HashMap<Character, Integer> map = new HashMap<>();
-        while(right < n){
-            if(map.size() < 3)
-                map.put(s.charAt(right), right++);
-            if(map.size() == 3){
-                int idxTmp = Collections.min(map.values());
-                map.remove(s.charAt(idxTmp));
-                left = idxTmp + 1;
+        while (end < s.length()) { // Find a valid window
+            if (map[s.charAt(end)] == 0) counter++;
+            map[s.charAt(end)]++;
+            end++;
+
+            while (counter > 2) { // Contract till the window becomes invalid
+                if (map[s.charAt(start)] == 1)  counter--;
+                map[s.charAt(start)]--;
+                start++;
             }
-            maxLen = Math.max(maxLen, right - left);
+            maxLen = Math.max(maxLen, end - start); // ***** // because find maximum substring
         }
         return maxLen;
     }

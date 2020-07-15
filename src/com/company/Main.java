@@ -627,8 +627,12 @@ public class Main {
         IntegerToEnglishWords integerToEnglishWords = new IntegerToEnglishWords();
         System.out.println(integerToEnglishWords.numberToWords(1234567));
 
+        // MinimumWindowSubstring
+        MinimumWindowSubstring minimumWindowSubstring = new MinimumWindowSubstring();
+        System.out.println(minimumWindowSubstring.minWindow("ADOBECODEBANC","ABC"));
+
          */
-        Integer.parseInt("a");
+
     }
 
 
