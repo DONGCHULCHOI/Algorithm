@@ -6,48 +6,40 @@ import java.util.PriorityQueue;
 
 public class MeetingRoomsII {
     public int minMeetingRooms(int[][] intervals) {
-        // Sort by start time, then iterate using min heaps based on end time
-        // if we do not use min heap for iterating, then it takes O(N^2)
         // T.C: O(NlogN) because sorting takes O(NlogN) and in the worst case, do N extract operation, so O(NlogN)
         // S.C: O(N) because construct min heap
+        // The priority queue consists of the end time of schedules
+        // The size of Priority queue is the number of the meeting rooms
+        // 1st. Sort by start time,
+        // 2nd. Iterate schedules and check a compatibility using min heaps
+        //      if it's not compatible, this means we need a new room, so add it.
+        //      if It's compatible, we don't need a new room, remove the top of priority queue and add the one.
+        // if we do not use min heap for iterating, then it takes O(N^2) // *****
         if(intervals.length == 0){
             return 0;
         }
-
-        // Min heap // *****
-        PriorityQueue<Integer> allocator = new PriorityQueue<>(
-                intervals.length,
-                new Comparator<Integer>(){
-                    public int compare(Integer a, Integer b){
-                        return a-b;
-                    }
-                }
-        );
-
-        // Sort the intervals by start time
+        // Sort the intervals by start time // *****
         Arrays.sort(
                 intervals,
-                new Comparator<int[]>(){ // ****
+                new Comparator<int[]>(){
                     public int compare(int[] a, int[] b){
                         return a[0] - b[0];
                     }
                 }
         );
 
-        // Add the first meeting
+        PriorityQueue<Integer> allocator = new PriorityQueue<>(); // default is min heap
+        // Add the first meeting for set up
         allocator.add(intervals[0][1]);
 
-        // Iterate over remaining intervals // *****
+        // Iterate schedules and check a compatibility // *****
         for (int i = 1; i < intervals.length; i++) {
-            // If the room due to free up the earliest is free, assign that room to this meeting.
-            if (intervals[i][0] >= allocator.peek()) { // = -> e.g. [1,10], [10,15] => can allocate [10, 15] right after [1,10]
-                allocator.remove(); // extract operation
+            if (intervals[i][0] >= allocator.peek()) {
+                allocator.remove();
             }
-            // If a new room is to be assigned, then also we add to the heap,
-            // If an old room is allocated, then also we have to add to the heap with updated end time.
-            allocator.add(intervals[i][1]); // insert operation
+            allocator.add(intervals[i][1]);
         }
-        // The size of the heap tells us the minimum rooms required for all the meetings. // *****
+        // The size of the heap tells us the minimum rooms required for all the meetings.
         return allocator.size();
     }
 }
