@@ -4,11 +4,11 @@ import java.util.Arrays;
 
 public class FindAndReplaceInString {
     public String findReplaceString(String S, int[] indexes, String[] sources, String[] targets) {
-        // T.C: O(NQ) where NN is the length of S, and we have QQ replacement operations
+        // T.C: O(NQ) where N is the length of S, and we have Q replacement operations
         // S.C: O(N)
         // First check whether we can do operations given arrays using match arr to save the information
         // Then, do the operations(build the ans)
-        // (!) the index of indexes, sources, and targets is same, but the index of S is different from the prev index
+        // (!) the index of indexes, sources, and targets is same, but the index of S is different from the prev indexes
         // So, use match array between two indexes like a arbitrator
         int[] match = new int[S.length()];
         Arrays.fill(match, -1);
