@@ -631,6 +631,18 @@ public class Main {
         MinimumWindowSubstring minimumWindowSubstring = new MinimumWindowSubstring();
         System.out.println(minimumWindowSubstring.minWindow("ADOBECODEBANC","ABC"));
 
+        // MergeKSortedLists
+        MergeKSortedLists mergeKSortedLists = new MergeKSortedLists();
+        ListNode l1 = new ListNode(1);
+        l1.next = new ListNode(3);
+        ListNode l2 = new ListNode(2);
+        l2.next = new ListNode(4);
+        ListNode res = mergeKSortedLists.mergeKLists(new ListNode[]{l1, l2});
+        while(res !=null){
+            System.out.print(res.val + " -> ");
+            res = res.next;
+        }
+
          */
 
     }

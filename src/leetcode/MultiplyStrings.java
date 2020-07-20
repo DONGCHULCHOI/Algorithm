@@ -1,9 +1,8 @@
 package leetcode;
 
 public class MultiplyStrings {
-    // Consider other better solution existing later
     public String multiply(String num1, String num2) {
-        // T.C: O(max(mn, m+n) where the m is the length of num1, n is the length of num2
+        // T.C: O(mn) where the m is the length of num1, n is the length of num2
         // S.C: O(m+n)
         // https://leetcode.com/problems/multiply-strings/discuss/17608/AC-solution-in-Java-with-explanation
         // make a product array which is num1.length() + num2.length() length of arr // *****
@@ -15,9 +14,9 @@ public class MultiplyStrings {
         int[] products = new int[n1 + n2]; // *****
         for (int i = n1 - 1; i >= 0; i--) {
             for (int j = n2 - 1; j >= 0; j--) {
-                int d1 = num1.charAt(i) - '0'; // ***
-                int d2 = num2.charAt(j) - '0'; // ***
-                products[i + j + 1] += d1 * d2; // filled from the end idx to the start idx // *****
+                int d1 = num1.charAt(i) - '0';
+                int d2 = num2.charAt(j) - '0';
+                products[i + j + 1] += d1 * d2; // filled from the end idx to the start idx // add the result at the proper digits // *****
             }
         }
         int carry = 0; // *****
@@ -36,3 +35,4 @@ public class MultiplyStrings {
         return sb.length() == 0 ? "0" : sb.toString(); // the case of num1, num2 are both 0 and the product of 0 and x // ***
     }
 }
+
