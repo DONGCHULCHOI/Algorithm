@@ -3,9 +3,19 @@ package leetcode;
 import com.company.ListNode;
 
 public class MergeTwoSortedLists {
-    public ListNode mergeTwoListsRecursion(ListNode l1, ListNode l2) {
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         // recursion
-        // T.C: O(n+m) because there will be exactly one call to mergeTwoLists per element in each list
+        // T.C: O(n+m) because there will be exactly one call to mergeTwoLists per element in each list, and the recursive tree is just one branch
         // S.C: O(n+m) because n+m stack frames consume O(n+m) space.
         if(l1 == null){
             return l2; // ***
@@ -23,7 +33,7 @@ public class MergeTwoSortedLists {
             return l2; // *****
         }
     }
-    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+    public ListNode mergeTwoListsIteration(ListNode l1, ListNode l2) {
         // iteration
         // T.C: O(n+m)
         // S.C: O(1)
@@ -40,7 +50,7 @@ public class MergeTwoSortedLists {
             }
             curr = curr.next;
         }
-        curr.next = (l1 == null) ? l2 : l1; // *****
+        curr.next = (l1 == null) ? l2 : l1; // when one of them is shorter than the other // *****
         return dummyHead.next;
     }
 }
