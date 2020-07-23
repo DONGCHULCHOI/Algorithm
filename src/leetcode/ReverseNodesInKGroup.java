@@ -25,10 +25,10 @@ public class ReverseNodesInKGroup {
         }
         // If we have k nodes, then we reverse them
         if (count == k) {
-            // Reverse the first k nodes of the list and get the reversed list's head.
+            // Reverse the first k nodes of the list and get the reversed list's head. // *****
             ListNode reversedHead = reverseList(head, k);
 
-            // head is now at the end of reversed list, curr is at the k+1th pos from 1st node
+            // head is now at the end of reversed list, curr is at the k+1th pos from 1st node // *****
             // connect the n-1 solution to the head
             head.next = reverseKGroup(curr, k);
             return reversedHead; // base case
