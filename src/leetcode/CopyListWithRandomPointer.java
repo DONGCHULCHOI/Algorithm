@@ -3,40 +3,54 @@ package leetcode;
 import com.company.Node;
 
 public class CopyListWithRandomPointer {
+    /*
+    // Definition for a Node.
+    class Node {
+        int val;
+        Node next;
+        Node random;
+
+        public Node(int val) {
+            this.val = val;
+            this.next = null;
+            this.random = null;
+        }
+    }
+    */
     public Node copyRandomList(Node head) {
         // T.C: O(N)
-        // S.C: O(1) // *1) // *****
+        // S.C: O(N)
+        // Step1. Iterate and make the clone, place it to the original node
+        // Step2. Assign random pointer of the clone using the random pointer of the original node
+        // Step3. After intertwining the nodes, Unweave
         if(head == null){
             return null;
         }
 
-        Node curr = head; // head is not dummy head
-        while(curr != null){ // make weaved linked list // *****
+        Node curr = head; // Step1 // *****
+        while(curr != null){
             Node newNode = new Node(curr.val); // deep clone
             newNode.next = curr.next;
             curr.next = newNode;
             curr = newNode.next;
         }
 
-        curr = head; // back to head again
-        while(curr != null){ // set random curr for the clone // *****
+        curr = head; // Step2 // *****
+        while(curr != null){
             curr.next.random = (curr.random != null) ? curr.random.next : null;
             curr = curr.next.next;
         }
+        // Step3 // *****
+        Node currOld = head; // *****
+        Node currNew = head.next; // *****
+        Node headNew = currNew; // ***
+        while(currOld != null){ // *****
+            currOld.next = currOld.next.next; // there is no worry to point null // *****
+            currNew.next = (currNew.next != null) ? currNew.next.next : null; // e.g. currNew -> currOld -> null // *****
 
-        Node currOldList = head; // *****
-        Node currNewList = head.next; // *****
-        Node headNew = head.next; // ***
-        while(currOldList != null){ // *****
-            // unweave the clone of the curr node and weave the next node of the curr of the old list
-            currOldList.next = currOldList.next.next;
-            // unweave the original of the curr node and weave the next node of the curr of the old list
-            currNewList.next = (currNewList.next != null) ? currNewList.next.next : null;
-
-            currOldList = currOldList.next; // update curr of old list
-            currNewList = currNewList.next; // update curr of new list
+            currOld = currOld.next;
+            currNew = currNew.next;
         }
         return headNew;
     }
-    // 1) this deep clone does not be included in S.C because it is just for the return, not related to needed extra space by the alogrithm related to input
 }
