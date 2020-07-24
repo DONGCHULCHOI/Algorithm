@@ -3,11 +3,20 @@ package leetcode;
 import com.company.ListNode;
 
 public class RemoveNthNodeFromEndOfList {
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
     public ListNode removeNthFromEnd(ListNode head, int n) {
-        // One pass
         // T.C: O(L) because The algorithm makes one traversal of the list of L nodes
         // S.C: O(1)
-        // keep distance n between first and second ptrs // *****
+        // keep distance n nodes between first and second ptrs // *****
         ListNode dummy = new ListNode();
         dummy.next = head;
         ListNode first = dummy;
