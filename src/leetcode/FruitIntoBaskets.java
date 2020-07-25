@@ -4,9 +4,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class FruitIntoBaskets {
+    // Consider make this follow Substring template, especially, Longest Substring with At Most Two Distinct Characters
     // T.C: O(N)
     // S.C: O(1)
     // Same as 159. Longest Substring with At Most Two Distinct Characters
+    // Expand till a window is invalid
+    // When invalid, Contract the window till valid
     // https://www.youtube.com/watch?v=za2YuucS0tw for the question explaination
     // https://leetcode.com/problems/fruit-into-baskets/discuss/170740/JavaC%2B%2BPython-Sliding-Window-for-K-Elements
     public int totalFruit(int[] tree) {

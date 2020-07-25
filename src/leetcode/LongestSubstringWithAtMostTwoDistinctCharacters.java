@@ -4,6 +4,12 @@ import java.util.Collections;
 import java.util.HashMap;
 
 public class LongestSubstringWithAtMostTwoDistinctCharacters {
+    // Consider differnt my opinion: W/ 904. Fruit Into Baskets also
+    //  Recognize this is map which is key and value
+    //  Expand a window till invalid
+    //  When invalid, then contract the window till valid
+    //  Do not move back the pointers
+    //  Clean the 904. Fruit Into Baskets also
     // T.C: O(n) where n is the length of string s
     // S.C: O(m) where m is the size of the charset
     // the valid window is when the window includes 3 different char type
