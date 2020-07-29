@@ -3,9 +3,10 @@ package leetcode;
 import java.util.Stack;
 
 public class MinStack {
-    // push, pop, top, and retrieving the minimum element in constant time
     // T.C: O(1) for all operations
-    // S.C: O(n) where n is the number of operation, and all the operations are push, then the 2*n space is used
+    // S.C: O(n) where n is the number of operation, and all the operations are push, then the 2*n space is used including stack and also the value is a pair => n + n
+    // push, pop, top, and retrieving the minimum element in constant time
+    // Keep the min value like pair in the stack // *****
     private Stack<int[]> stack;
 
     public MinStack() {
