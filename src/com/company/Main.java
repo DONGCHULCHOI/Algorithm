@@ -656,9 +656,15 @@ public class Main {
             res = res.next;
         }
 
+        // FindMedianFromDataStream
+        FindMedianFromDataStream findMedianFromDataStream = new FindMedianFromDataStream();
+        findMedianFromDataStream.addNum(1);
+        findMedianFromDataStream.addNum(2);
+        findMedianFromDataStream.addNum(3);
+        System.out.println(findMedianFromDataStream.findMedian());
+
          */
-
-
+        
 
     }
 
