@@ -1,12 +1,15 @@
 package leetcode;
 
-public class TicTacToe {
-    // Consider O(n) solution in the below link next time
+public class DesignTicTacToe {
+    // T.C: O(n)
+    // S.C: O(n^2)
+    // Keyword: dale, hill, only one dale and one hill
+    // assumption that a move is guaranteed to be valid and is placed on an empty block
     // https://leetcode.com/problems/design-tic-tac-toe/discuss/156572/Simple-Java-Solution-(ideas-from-n2-to-n-to-constant-time)
     private int[][] grid;
 
     /** Initialize your data structure here. */
-    public TicTacToe(int n) {
+    public DesignTicTacToe(int n) {
         grid = new int[n][n];
     }
 
@@ -19,11 +22,6 @@ public class TicTacToe {
      1: Player 1 wins.
      2: Player 2 wins. */
     public int move(int row, int col, int player) {
-        // assumption that a move is guaranteed to be valid and is placed on an empty block
-        // https://leetcode.com/problems/design-tic-tac-toe/discuss/156572/Simple-Java-Solution-(ideas-from-n2-to-n-to-constant-time)
-        // T.C: O(n)
-        // S.C: O(n^2)
-
         // place the mark
         grid[row][col] = (player == 1) ? 1 : 2;
 
@@ -45,8 +43,8 @@ public class TicTacToe {
         if(isHorizontal)
             return player;
 
-        // Check dale
-        if(row == col){
+        // Check dale // only one dale in square // *****
+        if(row == col){ // *****
             boolean isDale = true;
             for(int i=0; i<grid.length; i++){
                 if(grid[i][i] != player)
@@ -56,7 +54,7 @@ public class TicTacToe {
                 return player;
         }
 
-        // Check hill diagonal
+        // Check hill diagonal // only one hill in square // *****
         if(row+col == grid.length-1){ // ***** // when hill, row + col == constant, especially if the diagonal is located on the main diagonal, the sum is n-1
             boolean isHill = true;
             for(int i=0; i<grid.length; i++){

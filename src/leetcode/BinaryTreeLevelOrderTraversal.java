@@ -7,13 +7,13 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class BinaryTreeLevelOrderTraversal {
-    List<List<Integer>> levels = new ArrayList<>();
+    // T.C: O(N) where N is the number of nodes
+    // S.C: O(N)
+    // list idx == tree level, level starting from 0 // *****
+    // first entry of the level == list's size // *****
+    List<List<Integer>> levels = new ArrayList<>(); // *****
 
     public List<List<Integer>> levelOrderRecursion(TreeNode root) {
-        // recursion
-        // T.C: O(N) where N is the number of nodes
-        // S.C: O(N)
-        // (!) level starts with 0
         if(root == null){
             return levels;
         }
