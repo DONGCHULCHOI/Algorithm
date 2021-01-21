@@ -1,4 +1,4 @@
-package leetcode.amazon_google_questions;
+package leetcode.top100_questions;
 
 import java.util.Arrays;
 import java.util.LinkedList;
