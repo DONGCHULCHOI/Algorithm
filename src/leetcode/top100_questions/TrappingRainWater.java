@@ -5,6 +5,7 @@ public class TrappingRainWater {
         // T.C: O(n)
         // S.C: O(1)
         // Based on Container with most water
+        // Basically Move two pointers inward // *****
         // The Trapping water formed on the line will be limited by the height of the shorter line // *****
         // after decide direction, calculate the area only when height decreases inward, if not just update max height to skip the calculation // *****
         int ans = 0, l = 0, r = height.length-1;
