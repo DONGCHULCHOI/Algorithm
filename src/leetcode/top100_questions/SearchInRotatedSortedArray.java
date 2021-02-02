@@ -25,7 +25,7 @@ public class SearchInRotatedSortedArray {
             return binarySearch(0, n - 1);
         }
         else{ // if array is rotated // compare with 1st element of array // *****
-            if (target >= nums[0]){ // ***** // where dealing with = is important // e.g. [3,1], target = 3
+            if (target >= nums[0]){ // *****
                 return binarySearch(0, rotateIndex-1); // search in the left side of rotateIndex
             }
             else{
@@ -35,18 +35,19 @@ public class SearchInRotatedSortedArray {
     }
 
     public int findRotateIndex(int low, int high) {
-        // Find a rotation index i.e. index of the smallest element in the array // *****
+        // Find a pivot // *****
         // Binary search
+        // nums[mid] > nums[mid+1] && compare mid with low is two key point // *****
         if (nums[low] < nums[high]){ // the case of not rotated
             return 0;
         }
 
-        while (low <= high) { // same as binary search but depending on the patterns; there must be N(rotated 45 degree) pattern
+        while (low <= high) {
             int mid = (low + high) / 2;
-            if (nums[mid] > nums[mid + 1]){
+            if (nums[mid] > nums[mid + 1]){ // e.g. [4,5,6,1,2,3]
                 return mid + 1;
             }
-            if (nums[mid] < nums[low]){ // compare with the 1st element in the array // e.g. [5,6,1,2,3,4]
+            if (nums[mid] < nums[low]){ // e.g. [5,6,1,2,3,4]
                 high = mid - 1;
             }
             else{ // e.g. [3,4,5,6,1,2]
