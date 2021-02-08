@@ -30,8 +30,8 @@ public class WordSearch {
         // iterate domain values, and if the domain value is consistent, assign the value to the variable
         for (int d = 0; d < 4; d++) {
             if (row >= 0 && row < rows && col >= 0 && col < cols && board[row][col] == word.charAt(index)) {
-                board[row][col] = '#'; // assign the value to the variable
-                boolean result = backtrack(row + rowOffsets[d], col + colOffsets[d], word, index + 1);
+                board[row][col] = '#'; // assign the value to the variable // and to prevent the redundant
+                boolean result = backtrack(row + rowOffsets[d], col + colOffsets[d], word, index + 1); // select an unassigned variable
                 if(result != false)
                     return true;
                 board[row][col] = word.charAt(index); // remove the value to the variable
