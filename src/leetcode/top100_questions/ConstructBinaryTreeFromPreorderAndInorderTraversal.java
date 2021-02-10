@@ -45,9 +45,9 @@ public class ConstructBinaryTreeFromPreorderAndInorderTraversal {
         return helper(0, inorder.length);
     }
 
-    public TreeNode helper(int leftIdxInPre, int rightIdxInPre) {
-        // if there is no elements to construct subtrees
-        if(leftIdxInPre == rightIdxInPre) // *****
+    public TreeNode helper(int leftIdxInInorder, int rightIdxInInorder) {
+        // if leftIdxInInorder and rightIdxInInorder are same, there is no more subtree
+        if(leftIdxInInorder == rightIdxInInorder) // *****
             return null;
 
         // pick up ptrCurrInPre element as a root
@@ -56,11 +56,11 @@ public class ConstructBinaryTreeFromPreorderAndInorderTraversal {
         ptrCurrInPre++;
 
         // root splits inorder list into left and right subtrees
-        int rootIdxInPre = inorderIdxMap.get(rootVal);
+        int rootIdxInInorder = inorderIdxMap.get(rootVal);
         // build left subtree
-        root.left = helper(leftIdxInPre, rootIdxInPre);
+        root.left = helper(leftIdxInInorder, rootIdxInInorder);
         // build right subtree
-        root.right = helper(rootIdxInPre + 1, rightIdxInPre);
+        root.right = helper(rootIdxInInorder + 1, rightIdxInInorder);
 
         return root;
     }
