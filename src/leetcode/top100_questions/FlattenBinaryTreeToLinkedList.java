@@ -47,7 +47,7 @@ public class FlattenBinaryTreeToLinkedList {
             return null;
         }
 
-        // For a leaf node, we simply return thenode as it is // base case
+        // For a leaf node, we simply return the node as it is // base case
         if (node.left == null && node.right == null) {
             return node;
         }
