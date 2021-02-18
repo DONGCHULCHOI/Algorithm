@@ -1,8 +1,24 @@
 package leetcode.amazon_google_questions;
-
-import javafx.util.Pair;
-
 import java.util.*;
+
+//import javafx.util.Pair;
+class Pair<K, V> {
+    private K key;
+    private V value;
+
+    public Pair(K key, V value) {
+        this.key = key;
+        this.value = value;
+    }
+
+    public K getKey() {
+        return key;
+    }
+
+    public V getValue() {
+        return value;
+    }
+}
 
 public class WordLadder {
     // Consider bidirectional bfs next time

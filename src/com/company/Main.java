@@ -1,6 +1,8 @@
 package com.company;
 
-import leetcode.*;
+import leetcode.amazon_google_questions.*;
+import leetcode.top100_questions.*;
+
 import java.util.*;
 
 public class Main {
@@ -659,14 +661,13 @@ public class Main {
         findMedianFromDataStream.addNum(3);
         System.out.println(findMedianFromDataStream.findMedian());
 
+
+        PerfectSquares perfectSquares = new PerfectSquares();
+        System.out.println(perfectSquares.numSquares(12));
+
          */
-        
 
     }
-
-
-
-    
 }
 
 
