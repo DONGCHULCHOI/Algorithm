@@ -1,22 +1,25 @@
 package leetcode.top100_questions;
 
 public class BestTimeToBuyAndSellStock {
+    // Kadane's algorithm
+    // T.C: O(N)
+    // S.C: O(1)
     public int maxProfit(int[] prices) {
-        // T.C: O(N)
-        // S.C: O(1)
-        // Find the biggest gap
-        // Move a pointer from left to right
-        // Update minPrice or update maxProfit
         int minPrice = Integer.MAX_VALUE;
-        int maxProfit = 0;
+        int maxSoFar = 0;
 
-        for (int i = 0; i < prices.length; i++) {
-            if (prices[i] < minPrice)
+        // Move ptr from left to right
+        for(int i = 0; i < prices.length; i++){
+            // calculate local(current) max profit at given ptr
+            if(prices[i] < minPrice) {
                 minPrice = prices[i];
-            else if (prices[i] - minPrice > maxProfit)
-                maxProfit = prices[i] - minPrice;
+            }
+            int currMax = prices[i] - minPrice;
+
+            // update global max profit
+            maxSoFar = Math.max(maxSoFar, currMax);
         }
 
-        return maxProfit;
+        return maxSoFar;
     }
 }

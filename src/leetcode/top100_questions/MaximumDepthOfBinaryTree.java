@@ -4,7 +4,7 @@ import com.company.TreeNode;
 
 public class MaximumDepthOfBinaryTree {
     public int maxDepth(TreeNode node) {
-        // DFS
+        // DFS:
         // T.C: O(N)
         // S.C: O(N)
         if(node == null){
