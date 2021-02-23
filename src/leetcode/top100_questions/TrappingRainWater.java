@@ -2,6 +2,7 @@ package leetcode.top100_questions;
 
 public class TrappingRainWater {
     public int trap(int[] height) {
+        // Brute force(iteration)
         // T.C: O(n)
         // S.C: O(1)
         // Based on Container with most water

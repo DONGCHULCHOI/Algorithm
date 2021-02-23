@@ -2,6 +2,7 @@ package leetcode.top100_questions;
 
 public class ContainerWithMostWater {
     public int maxArea(int[] height) {
+        // Brute force(iteration)
         // T.C: O(n)
         // S.C: O(1)
         // The area formed between the lines will always be limited by the height of the shorter line // *****
