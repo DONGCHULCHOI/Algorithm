@@ -18,8 +18,9 @@ import com.company.TreeNode;
  * }
  */
 // Recursion:
-// T.C: O(6^n)
+// T.C: O(n) since we visit all nodes once
 // S.C: O(n)
+// related problems: House Robber, House Robber III
 // if you have time, consider improving time complexity
 // solve subproblems recursively, use those to build upper level problem's solution
 // think the given node as root node first, but also consider the given node is one of the subtrees

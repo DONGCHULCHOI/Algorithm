@@ -8,16 +8,14 @@ public class BestTimeToBuyAndSellStock {
         int minPrice = Integer.MAX_VALUE;
         int maxSoFar = 0;
 
-        // Move ptr from left to right
-        for(int i = 0; i < prices.length; i++){
+        for (int i = 0; i < prices.length; i++) { // Move ptr from left to right
             // calculate local(current) max profit at given ptr
-            if(prices[i] < minPrice) {
+            if (prices[i] < minPrice) {
                 minPrice = prices[i];
             }
-            int currMax = prices[i] - minPrice;
+            int currMax = prices[i] - minPrice; // currMax == 0 -> Buy, currMax != 0 -> sell, and following buy and sell rule
 
-            // update global max profit
-            maxSoFar = Math.max(maxSoFar, currMax);
+            maxSoFar = Math.max(maxSoFar, currMax); // update global max profit
         }
 
         return maxSoFar;
