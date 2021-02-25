@@ -13,8 +13,8 @@ public class WordBreak {
     // Segmentation of substring s1,k is possible if only the last word(si+1,k) is in the dictionary, then the remaining substring s1,i can be segmented
     // determine if s can be segmented into a space-separated sequence of one or more dictionary words -> s1,i also be one or more dictionary words
     // opt(k) = whether substring s1,k can be segmented using the words in the dictionary
-    //        = 1 if the segmentation is possible
-    //        = 0 otherwise
+    //        = true if the segmentation is possible
+    //        = false otherwise
     //        = Max(opt(i)), 0 <= i < k and si+1,k is a word in the dictionary
     //        = 0 otherwise
     // Max(opt(i)) -> s1,i also be one or more dictionary words
@@ -34,9 +34,6 @@ public class WordBreak {
                 if(opt[i] && dictionary.contains(s.substring(i,k))) { // because idx in here is +1 greater than idx of String
                     opt[k] = true;
                     break; // if you do not break, then ruins result like pen(O)p(X)en
-                }
-                else {
-                    opt[k] = false;
                 }
             }
         }
