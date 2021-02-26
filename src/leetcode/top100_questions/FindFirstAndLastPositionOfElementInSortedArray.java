@@ -1,11 +1,12 @@
 package leetcode.top100_questions;
 
 public class FindFirstAndLastPositionOfElementInSortedArray {
+    // Binary Search:
+    // T.C: O(log N)
+    // S.C: O(1)
+    // do binary search to find the leftmost once
+    // do binary search to find the rightmost once
     public int[] searchRange(int[] nums, int target) {
-        // T.C: O(log N)
-        // S.C: O(1)
-        // do binary search to find the leftmost once
-        // do binary search to find the rightmost once
         int[] res = new int[2];
         res[0] = findLeftMost(nums, target);
         res[1] = findRightMost(nums, target);

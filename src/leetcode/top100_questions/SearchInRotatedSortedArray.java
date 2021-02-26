@@ -1,12 +1,13 @@
 package leetcode.top100_questions;
 
 public class SearchInRotatedSortedArray {
+    // Binary Search:
+    // T.C: O(log n)
+    // S.C: O(1)
     private int [] nums;
     private int target;
 
     public int search(int[] nums, int target) {
-        // T.C: O(log n)
-        // S.C: O(1)
         this.nums = nums;
         this.target = target;
 
