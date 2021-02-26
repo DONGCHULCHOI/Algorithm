@@ -3,7 +3,7 @@ package leetcode.top100_questions;
 import com.company.TreeNode;
 
 public class ValidateBinarySearchTree {
-    // DFS:
+    // Recursion:
     // T.C: O(N)
     // S.C: O(N)
     // assume the following:
@@ -14,10 +14,10 @@ public class ValidateBinarySearchTree {
     }
 
     public boolean isValidBSTHelper(TreeNode node, Integer lower, Integer upper){
+        // base case
         if(node == null){
             return true;
         }
-        // visit
         if(lower != null && node.val <= lower){ // *****
             return false;
         }
@@ -25,6 +25,9 @@ public class ValidateBinarySearchTree {
             return false;
         }
 
-        return isValidBSTHelper(node.left, lower, node.val) && isValidBSTHelper(node.right, node.val, upper); // *****
+        boolean isLeftSubtreeValid = isValidBSTHelper(node.left, lower, node.val);
+        boolean isRightSubtreeValid = isValidBSTHelper(node.right, node.val, upper);
+
+        return  isLeftSubtreeValid && isRightSubtreeValid;
     }
 }
