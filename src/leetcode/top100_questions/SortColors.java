@@ -2,9 +2,10 @@ package leetcode.top100_questions;
 
 public class SortColors {
     public void sortColors(int[] nums) {
+        // Array:
+        // related problem: Move Zeroes, Sort Colors
         // T.C: O(n)
         // S.C: O(1)
-        // Move Zeroes
         int ptr1 = 0; // the right most zeros boundary
         int ptr2 = nums.length - 1; // the left most twos boundary
         int curr = 0;

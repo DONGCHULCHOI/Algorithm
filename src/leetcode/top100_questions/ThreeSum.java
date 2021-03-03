@@ -6,6 +6,8 @@ import java.util.List;
 
 public class ThreeSum {
     public List<List<Integer>> threeSum(int[] nums) {
+        // Binary Search:
+        // related problems: Two Sum II, Three Sum
         // T.C: O(n^2)
         // S.C: O(log n) if quick / O(n) if merge
         // use Two Sum II // *****

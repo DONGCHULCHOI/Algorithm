@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class FindTheDuplicateNumber {
+        // Set/Map
         // T.C: O(n)
         // S.C: O(n)
         public int findDuplicate(int[] nums) {

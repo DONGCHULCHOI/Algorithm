@@ -13,19 +13,20 @@ public class TrappingRainWater {
         int lMax = 0, rMax = 0;
         while(l < r){
             if(height[l] < height[r]){ // *****
-                if(height[l] >= lMax){ // *****
-                    lMax = height[l]; // *****
-                }
-                else{
+                if(height[l] < lMax) {
                     ans += lMax - height[l]; // *****
+                }
+                else {
+                    lMax = height[l]; // *****
                 }
                 l++;
             }
             else{
-                if (height[r] >= rMax) { // *****
-                    rMax = height[r]; // *****
-                } else {
+                if (height[r] < rMax) { // *****
                     ans += rMax - height[r]; // *****
+                }
+                else {
+                    rMax = height[r]; // *****
                 }
                 r--;
             }

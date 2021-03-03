@@ -20,7 +20,7 @@ class Pair<K, V> { // do not add public in front of the class
 }
 
 public class PerfectSquares {
-    // Brute force(BFS):
+    // BFS:
     // Two important BFS concept:
     //  1. Expand the childs
     //  2. Shortest path

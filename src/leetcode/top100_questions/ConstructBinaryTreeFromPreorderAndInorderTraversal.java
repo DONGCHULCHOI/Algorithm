@@ -21,12 +21,12 @@ public class ConstructBinaryTreeFromPreorderAndInorderTraversal {
      *     }
      * }
      */
-// Binary tree:
-// T.C: O(n); master Theorem
-// S.C: O(n)
-// find the root in preorder list
-// the root splits the inoder list into left subtree and right subtree
-// keep repeating
+    // Binary tree:
+    // T.C: O(n); master Theorem
+    // S.C: O(n)
+    // find the root in preorder list
+    // the root splits the inoder list into left subtree and right subtree
+    // keep repeating
     int ptrCurrInPre = 0;
     int[] preorder;
     int[] inorder;

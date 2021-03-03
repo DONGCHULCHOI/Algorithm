@@ -2,6 +2,7 @@ package leetcode.top100_questions;
 
 public class RotateImage {
     public void rotate(int[][] matrix) {
+        // Array:
         // T.C: O(N^2)
         // S.C: O(1)
         // transpose matrix -> reverse each row // *****

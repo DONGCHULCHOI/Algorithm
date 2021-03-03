@@ -2,7 +2,8 @@ package leetcode.top100_questions;
 
 public class TwoSumII {
     public int[] twoSum(int[] numbers, int target) {
-        // Two Sum II
+        // Binary Search:
+        // related problems: Two Sum II, Three Sum
         // T.C: O(n)
         // S.C: O(1)
         // two pointer // *****

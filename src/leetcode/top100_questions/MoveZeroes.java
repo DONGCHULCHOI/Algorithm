@@ -1,6 +1,8 @@
 package leetcode.top100_questions;
 
 public class MoveZeroes {
+    // Array:
+    // related problem: Move Zeroes, Sort Colors
     // T.C: O(n)
     // S.C: O(1)
     public void moveZeroes(int[] nums) {

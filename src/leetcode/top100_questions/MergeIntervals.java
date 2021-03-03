@@ -6,6 +6,7 @@ import java.util.List;
 
 public class MergeIntervals {
     public int[][] merge(int[][] intervals) {
+        // Sort:
         // T.C: O(nlog n)
         // S.C: O(n) if merge sort / O(log n) if quick sort
         Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0])); // *****

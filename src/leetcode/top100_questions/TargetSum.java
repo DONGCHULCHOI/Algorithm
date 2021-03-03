@@ -5,11 +5,11 @@ public class TargetSum {
     // T.C: O(2^n) because 2-nary tree and the depth is n which is the size of nums
     // S.C: O(n) because the depth of recursion tree is n
     // e.g. [1,1] S=0
-    //                  O [1(v), 1]
+    //                  O []
     //                /   \
-    //    [+1, 1(v)] O     ...
+    //          [+1] O     O [-1] ...
     //              / \
-    // [+1, +1](v) O   O [+1, -1](v)
+    //    [+1, +1] O   O [+1, -1]
     int count = 0;
     public int findTargetSumWays(int[] nums, int S) {
         calculate(nums, 0, 0, S);

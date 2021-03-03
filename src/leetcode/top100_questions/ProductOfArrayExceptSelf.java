@@ -2,6 +2,7 @@ package leetcode.top100_questions;
 
 public class ProductOfArrayExceptSelf {
     public int[] productExceptSelfOriginal(int[] nums) {
+        // Array:
         // T.C: O(N)
         // S.C: O(N)
         // constraint: without division

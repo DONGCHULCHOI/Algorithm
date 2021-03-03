@@ -3,6 +3,8 @@ package com.company;
 import leetcode.amazon_google_questions.*;
 import leetcode.top100_questions.*;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.*;
 
 public class Main {

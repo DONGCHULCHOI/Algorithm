@@ -5,11 +5,12 @@ import java.util.Map;
 
 public class MajorityElement {
     public int majorityElement(int[] nums) {
+        // Set/Map:
         // T.C: O(n)
         // S.C: O(1)
         Map<Integer, Integer> count = new HashMap<>();
         for(int num : nums) {
-            count.put(num, count.getOrDefault(num, 1) + 1);
+            count.put(num, count.getOrDefault(num, 0) + 1);
         }
 
         Map.Entry<Integer, Integer> majorityEntry = null;
@@ -18,7 +19,6 @@ public class MajorityElement {
                 majorityEntry = entry;
             }
         }
-
         return majorityEntry.getKey();
     }
 }

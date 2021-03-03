@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class TwoSum {
     public int[] twoSum(int[] nums, int target){
-        // one pass hash table
+        // Set/Map:
         // T.C: O(n)
         // S.C: O(n) *1)
         // 1) The extra space required depends on the number of items stored in the hash table, which stores at most n elements
