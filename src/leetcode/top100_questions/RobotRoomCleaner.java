@@ -26,12 +26,15 @@ public class RobotRoomCleaner {
     */
     // see mine first in comments
     /* mine
-    private int[][] directions = {{-1, 0}, {0, 1}, {1, 0}, {0, -1}}; // 0: 'up', 1: 'right', 2: 'down', 3: 'left' // *****
+    // 1st. calculate domains at given point
+    // 2nd. if it is consistent
+    // 3rd. assign the value to assignment, and move the point corresponding to the value
+    private int[][] directions = new int[][]{{-1, 0}, {0, 1}, {1, 0}, {0, -1}}; // 0: 'up', 1: 'right', 2: 'down', 3: 'left' // *****
     private Set<Pair<Integer, Integer>> visited = new HashSet();
 
     public void main(String[] args, int[][] grid) {
         List<List<Pair<Integer, Integer>>> list = new ArrayList<>();
-        backtracking(list, new ArrayList<>(new Pair(1, 3)), grid, 1, 3);
+        backtracking(list, new ArrayList<>(new Pair(1, 3)), grid, 1, 3); // the recursion tree starts with start point
     }
     public void backtracking(List<List<Pair>> list, List<Pair> assignment, int[][] grid, int row, int col) {
          int i = 0;
@@ -57,9 +60,33 @@ public class RobotRoomCleaner {
      */
     /*
     // going clockwise : 0: 'up', 1: 'right', 2: 'down', 3: 'left'
-    int[][] directions = {{-1, 0}, {0, 1}, {1, 0}, {0, -1}};
-    Set<Pair<Integer, Integer>> visited = new HashSet();
-    Robot robot;
+    private int[][] directions = new int[][]{{-1, 0}, {0, 1}, {1, 0}, {0, -1}};
+    private Set<Pair<Integer, Integer>> visited = new HashSet();
+    private Robot robot;
+
+    public void cleanRoom(Robot robot) {
+        this.robot = robot;
+        backtrack(0, 0, 0); // we don't know where the robot starts, but it does not matter where we start from
+    }
+
+    public void backtrack(int row, int col, int d) {
+        visited.add(new Pair<>(row, col));
+        robot.clean();
+
+        for (int i = 0; i < 4; ++i) { // 1st. calculate domains at given point
+            int newD = (d + i) % 4;
+            int newRow = row + directions[newD][0];
+            int newCol = col + directions[newD][1];
+
+            if (!visited.contains(new Pair<>(newRow, newCol)) && robot.move()) { // 2nd. if it is consistent
+                backtrack(newRow, newCol, newD); // 3rd. assign the value to assignment, and move the point corresponding to the value
+                goBack();
+                //visited.remove(new Pair<>(row, col)); // cuz clean duplicated zone -> time complexity increased.
+            }
+
+            robot.turnRight();
+        }
+    }
 
     public void goBack() { // go back to the original direction and location where it is called before
         robot.turnRight();
@@ -67,29 +94,6 @@ public class RobotRoomCleaner {
         robot.move();
         robot.turnRight();
         robot.turnRight();
-    }
-
-    public void backtrack(int row, int col, int d) {
-        visited.add(new Pair(row, col));
-        robot.clean();
-        // going clockwise : 0: 'up', 1: 'right', 2: 'down', 3: 'left'
-        for (int i = 0; i < 4; ++i) {
-            int newD = (d + i) % 4;
-            int newRow = row + directions[newD][0];
-            int newCol = col + directions[newD][1];
-
-            if (!visited.contains(new Pair(newRow, newCol)) && robot.move()) {
-                backtrack(newRow, newCol, newD);
-                goBack();
-            }
-            // turn the robot following chosen direction : clockwise
-            robot.turnRight();
-        }
-    }
-
-    public void cleanRoom(Robot robot) {
-        this.robot = robot;
-        backtrack(0, 0, 0);
     }
     */
 }
