@@ -21,12 +21,12 @@ public class LetterCombinationsOfAPhoneNumber {
         map.put("9", "wxyz");
 
         if(digits.length() != 0){
-            backtrack(list, new StringBuilder(), digits, map);
+            backtracking(list, new StringBuilder(), digits, map);
         }
         return list;
     }
 
-    public void backtrack(List<String> list, StringBuilder assignment, String digits, Map<String, String> map){
+    public void backtracking(List<String> list, StringBuilder assignment, String digits, Map<String, String> map){
         if (digits.length() == 0) {
             list.add(assignment.toString());
             return;
@@ -35,7 +35,7 @@ public class LetterCombinationsOfAPhoneNumber {
         String domains = map.get(digits.substring(0, 1)); // e.g. 23; [a,b,c] for 2, [d,e,f] for 3 // *****
         for (int i = 0; i < domains.length(); i++) {
             assignment.append(domains.substring(i, i + 1));
-            backtrack(list, assignment, digits.substring(1, digits.length()), map); // e.g. 23 -> 3
+            backtracking(list, assignment, digits.substring(1, digits.length()), map); // e.g. 23 -> 3
             assignment.deleteCharAt(assignment.length() - 1);
         }
     }
