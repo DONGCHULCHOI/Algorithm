@@ -8,9 +8,10 @@ public class CourseSchedule {
     // Find a cycle using DFS
     public boolean canFinish(int numCourses, int[][] prerequisites) {
         // build graph using adjacent list
-        List<List<Integer>> courses = new ArrayList<List<Integer>>(numCourses);
+        // each course is node
+        List<List<Integer>> courses = new ArrayList<>();
         for(int i = 0; i < numCourses; i++) {
-            courses.add(new ArrayList<Integer>());
+            courses.add(new ArrayList<>());
         }
         for(int i = 0; i < prerequisites.length; i++) {
             courses.get(prerequisites[i][1]).add(prerequisites[i][0]);
@@ -32,10 +33,9 @@ public class CourseSchedule {
 
         visited[course] = 1; // mark it being visited
 
-        // dfs its adjacent nodes
         List<Integer> eligibleCourses = courses.get(course); // get its adjacent nodes
         for(int i = 0; i < eligibleCourses.size(); i++) {
-            int eligibleCourse = eligibleCourses.get(i).intValue();
+            int eligibleCourse = eligibleCourses.get(i);
 
             if(visited[eligibleCourse] == 1) return false; // the node has been visited while visiting adjacent nodes ==> cycle // *****
             if(visited[eligibleCourse]  == 0) { // not visited

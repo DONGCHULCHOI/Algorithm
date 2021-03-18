@@ -25,6 +25,9 @@ public class PerfectSquares {
     //  1. Expand the childs
     //  2. Shortest path
     // hint for using bfs: return the least***** number of perfect square numbers that sum to n
+    // node.val = remain = target(remain) - perfect square num
+    // level means the number of used perfect square numbers including last itself
+    // visited means that it is already decided not perfect square number
     // use Pair class to keep the current level // *****
     // use set for time complexity // *****
     public int numSquares(int n) {
