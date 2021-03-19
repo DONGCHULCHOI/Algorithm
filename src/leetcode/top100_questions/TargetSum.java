@@ -1,7 +1,7 @@
 package leetcode.top100_questions;
 
 public class TargetSum {
-    // Brute force(Recursion):
+    // Brute force(backtracking):
     // T.C: O(2^n) because 2-nary tree and the depth is n which is the size of nums
     // S.C: O(n) because the depth of recursion tree is n
     // e.g. [1,1] S=0

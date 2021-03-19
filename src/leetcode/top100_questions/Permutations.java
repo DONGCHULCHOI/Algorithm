@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Permutations {
-    // Backtracking:
+    // Brute force(backtracking):
     // Time complexity
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> list = new ArrayList<>();

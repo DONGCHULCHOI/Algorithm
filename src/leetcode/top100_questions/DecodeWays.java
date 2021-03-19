@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class DecodeWays {
-    // backtracking:
+    // Recursion(backtracking):
     private int count = 0;
     private Set<String> set;
 

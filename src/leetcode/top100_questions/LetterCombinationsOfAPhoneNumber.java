@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 public class LetterCombinationsOfAPhoneNumber {
-    // Backtracking:
+    // Brute force(backtracking):
     // Consider time complexity next time
     public List<String> letterCombinations(String digits) {
         List<String> list = new ArrayList<>();

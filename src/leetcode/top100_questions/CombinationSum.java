@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class CombinationSum {
-    // Backtracking:
+    // Brute force(backtracking):
     // time complexity
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
         List<List<Integer>> list = new ArrayList<>();

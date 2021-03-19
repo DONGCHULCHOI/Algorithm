@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class WordSearch {
-    // Backtracking:
+    // Brute force(backtracking):
     // consider how to improve time complexity
     // 1st. calculate domains at given point
     // 2nd. if it is consistent

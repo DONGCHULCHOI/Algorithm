@@ -1,7 +1,7 @@
 package leetcode.top100_questions;
 
 public class RobotRoomCleaner {
-    // Backtracking:
+    // Brute force(backtracking):
     // time complexity
     // see mine first in comments
     // robot has direction: *****

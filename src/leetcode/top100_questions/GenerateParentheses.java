@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GenerateParentheses {
-    // Backtracking:
+    // Brute force(backtracking):
     // Consider T.C. / S.C next time
     public List<String> generateParenthesis(int n) {
         List<String> list = new ArrayList<>();

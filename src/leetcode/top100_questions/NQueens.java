@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class NQueens {
-    // Backtracking:
+    // Brute force(backtracking):
     // time complexity
     // only one domains -> 1, has to iterate for selecting unassinged var -> for
     // assignment is 2D
