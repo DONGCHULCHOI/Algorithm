@@ -8,33 +8,38 @@ public class NumberOfIslands {
     // Linear scan the 2d grid map, if a node contains a '1', then it is a root node that triggers a Depth First Search.
     // During DFS, every visited node should be set as '0' to mark as visited node.
     // Count the number of root nodes that trigger DFS, this number would be the number of islands
-    public int numIslands(char[][] grid) {
-        if(grid == null || grid.length == 0){
-            return 0;
-        }
+    private int count = 0;
 
-        int numIslands = 0;
-        for(int row = 0; row < grid.length; row++){
-            for(int col = 0; col < grid[0].length; col++){
-                if(grid[row][col] == '1'){
-                    dfs(grid, row, col);
-                    numIslands++;
+    public int numIslands(char[][] grid) {
+        int rowLen = grid.length;
+        int colLen = grid[0].length;
+
+        for(int i = 0; i < rowLen; i++) {
+            for(int j = 0; j < colLen; j++) {
+                if(grid[i][j] == '1') {
+                    dfs(grid, rowLen, colLen, i, j);
+                    count++;
                 }
             }
         }
-        return numIslands;
+        return count;
     }
-    private void dfs(char[][] grid, int row, int col){
-        if (row < 0 || col < 0 || row >= grid.length || col >= grid[0].length || grid[row][col] == '0') { // base case
+
+    public void dfs(char[][] grid, int rowLen, int colLen, int row, int col) {
+        if(grid[row][col] == '0')
             return;
+
+        grid[row][col] = '0';
+
+        int[][] dirs = {{-1, 0}, {0, 1}, {1, 0}, {0, -1}};
+        for(int i = 0; i < 4; i++) {
+            int newRow = row + dirs[i][0];
+            int newCol = col + dirs[i][1];
+            if(newRow >= 0 && newRow < rowLen && newCol >=0 && newCol < colLen) {
+                if(grid[newRow][newCol] != '0') {
+                    dfs(grid, rowLen, colLen, newRow, newCol);
+                }
+            }
         }
-
-        grid[row][col] = '0'; // visit
-
-        // loop for unvisited adjacent neighbors
-        dfs(grid, row-1, col);
-        dfs(grid, row, col-1);
-        dfs(grid, row+1, col);
-        dfs(grid, row, col+1);
     }
 }

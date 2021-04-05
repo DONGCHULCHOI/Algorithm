@@ -5,22 +5,23 @@ import java.util.List;
 
 public class Permutations {
     // Brute force(backtracking):
-    // Time complexity
+    private List<List<Integer>> res = new ArrayList<>();
+
     public List<List<Integer>> permute(int[] nums) {
-        List<List<Integer>> list = new ArrayList<>();
-        backtracking(list, new ArrayList<>(), nums);
-        return list;
+        backtracking(new ArrayList<>(), nums, 0);
+        return res;
     }
 
-    private void backtracking(List<List<Integer>> list, List<Integer> assignment, int [] nums){
-        if(assignment.size() == nums.length){
-            list.add(new ArrayList<>(assignment));
+    public void backtracking(List<Integer> assignment, int[] nums, int start) {
+        if(start == nums.length) {
+            res.add(new ArrayList<>(assignment));
+            return;
         }
 
-        for(int i = 0; i < nums.length; i++){
+        for(int i = 0; i < nums.length; i++) {
             if(!assignment.contains(nums[i])) {
                 assignment.add(nums[i]);
-                backtracking(list, assignment, nums);
+                backtracking(assignment, nums, start + 1);
                 assignment.remove(assignment.size() - 1);
             }
         }

@@ -1,7 +1,7 @@
 package leetcode.top100_questions;
 
-import java.util.*;
 
+import java.util.*;
 //import javafx.util.Pair;
 class Pair<K, V> { // do not add public in front of the class
     private K key;
@@ -31,36 +31,33 @@ public class PerfectSquares {
     // use Pair class to keep the current level // *****
     // use set for time complexity // *****
     public int numSquares(int n) {
-        List<Integer> squareNums = new ArrayList<Integer>();
-        for(int i = 1; i * i <= n; i++) {
-            squareNums.add(i * i);
+        List<Integer> perfectSquareNumbers = new ArrayList<>();
+        for(int i = 1;  i <= n; i++) {
+            if(i * i <= n)
+                perfectSquareNumbers.add(i * i);
         }
 
+        Pair<Integer, Integer> root = new Pair<>(n, 1);
+        Set<Integer> visited = new HashSet<>();
+        visited.add(root.getKey());
         Queue<Pair<Integer, Integer>> queue = new LinkedList<>();
-        Set<Integer> repeated = new HashSet<>();
+        queue.add(root);
 
-        int level = 1;
-        queue.add(new Pair(n,level));
-        repeated.add(n);
-
-        while(queue.size() != 0) {
+        while(!queue.isEmpty()) {
             Pair<Integer, Integer> node = queue.remove();
-
-            int remainder = node.getKey();
-            double sqrt = Math.sqrt(remainder);
-            if((sqrt - Math.floor(sqrt)) == 0) { // goal test
+            double num = Math.sqrt(node.getKey());
+            if(num - Math.floor(num) == 0) {
                 return node.getValue();
             }
 
-            for(int squareNum : squareNums) {
-                int remainderChild = remainder - squareNum; // expand the childs
-
-                if(remainderChild > 0 && !repeated.contains(remainderChild)){ // for time complexity
-                    queue.add(new Pair(remainderChild, node.getValue() + 1)); // for keeping the current level
-                    repeated.add(remainderChild);
+            for(int perfectSquareNum : perfectSquareNumbers) {
+                int remain = node.getKey() - perfectSquareNum;
+                if(remain > 0 && !visited.contains(remain)) {
+                    visited.add(remain);
+                    queue.add(new Pair<>(remain, node.getValue() + 1));
                 }
             }
         }
-        return level;
+        return 0;
     }
 }

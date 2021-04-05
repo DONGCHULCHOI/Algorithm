@@ -22,8 +22,9 @@ import com.company.TreeNode;
 // S.C: O(n)
 // related problems: House Robber, House Robber III
 // if you have time, consider improving time complexity
-// solve subproblems recursively, use those to build upper level problem's solution
-// think the given node as root node first, but also consider the given node is one of the subtrees
+// get the upper level's recursion function sol using subproblem's recursion function sol(assume we know subproblem's recursion function sol) // *****
+// think the given node as root node first, but also consider the given node is one of the subtrees // *****
+// consider base case // *****
 /*
     function helper(node, the parent is robbed or not?) {
         tackle basic case...

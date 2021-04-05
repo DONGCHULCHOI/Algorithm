@@ -6,7 +6,7 @@ import java.util.List;
 public class NQueens {
     // Brute force(backtracking):
     // time complexity
-    // only one domains -> 1, has to iterate for selecting unassinged var -> for
+    // domains = [0, 1]
     // assignment is 2D
     // overall process direction: row by row, in the row, col by col
     // for checking consistency:
@@ -22,8 +22,8 @@ public class NQueens {
     public List<List<String>> solveNQueens(int n) {
         List<List<String>> list = new ArrayList<>();
         int[] cols = new int[n];
-        int[] hills = new int[2 * n + 1];
-        int[] dales = new int[4 * n + 1];
+        int[] hills = new int[2 * n - 1]; // *****
+        int[] dales = new int[4 * n - 1]; // *****
         backtracking(list, new ArrayList<>(), 0, n, cols, hills, dales);
 
         return list;
@@ -35,8 +35,8 @@ public class NQueens {
             return;
         }
 
-        for(int col = 0; col < n; col++) { // select unassigned var, don't have to iterate domains cuz domain is 1
-            if(cols[col] + hills[row + col] + dales[row - col + 2 * n] == 0) { // if consistence
+        for(int col = 0; col < n; col++) {
+            if(cols[col] + hills[row + col] + dales[row - col + 2 * n] == 0) { // if consistence // *****
                 StringBuilder sb = new StringBuilder();
                 for(int i = 0; i < col; i++) {
                     sb.append('.');
@@ -46,7 +46,7 @@ public class NQueens {
                     sb.append('.');
                 }
                 assignment.add(sb.toString());
-                // for consitency check
+                // for consitency check // *****
                 cols[col] = 1;
                 hills[row + col] = 1;
                 dales[row - col + 2 * n] = 1;
@@ -57,7 +57,7 @@ public class NQueens {
                     sb.deleteCharAt(sb.length() - 1);
                 }
                 assignment.remove(assignment.size() - 1);
-                // for consitency check
+                // for consitency check // *****
                 cols[col] = 0;
                 hills[row + col] = 0;
                 dales[row - col + 2 * n] = 0;

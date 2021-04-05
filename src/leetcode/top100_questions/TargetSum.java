@@ -10,7 +10,8 @@ public class TargetSum {
     //          [+1] O     O [-1] ...
     //              / \
     //    [+1, +1] O   O [+1, -1]
-    int count = 0;
+    private int count = 0;
+
     public int findTargetSumWays(int[] nums, int S) {
         calculate(nums, 0, 0, S);
         return count;

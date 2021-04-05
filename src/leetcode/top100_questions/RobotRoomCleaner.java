@@ -3,19 +3,29 @@ package leetcode.top100_questions;
 public class RobotRoomCleaner {
     // Brute force(backtracking):
     // time complexity
-    // see mine first in comments
-    // robot has direction: *****
-    // so we have to iterate domain values from which the robot are headed, and the order we visit is clockwise
-    // then, use move() which makes the robot go forward to where it is headed,
+    // robot has direction: // *****
+    // start from start point // *****
+    // select unassigned variable, and iterate domain values
+    // before iterate domain values, have to calculate domain values at given point // *****
+    // calculate the domain values using the below:
+    // int[][] directions = new int[][]{{-1, 0}, {0, 1}, {1, 0}, {0, -1}}; // 0: 'up', 1: 'right', 2: 'down', 3: 'left' // *****
+    // for (int i = 0; i < 4; i++) {
+    //     int newRow = row + directions[i][0];
+    //     int newCol = col + directions[i][1];
+    // so we have to iterate domain values from which the robot are headed, and the order we visit is clockwise // *****
+    // if the domain value is consistent,
+    // then, to assign the domain value, use move() which makes the robot go forward to where it is headed, // *****
     // and at the same time, the direction is also right;
     //      e.g: robot is at (1,1), and it's headed to the north, the possible domains are [[0,1](Up),[1,2](Right),[2,1](Down),[1,0](Left)]
     //           if we iterate [1,0] first, then the robot goes from (1,1) to (1,0) but it's headed to the north, which is not make-sense
     //           if we iterate [0,1] first, then the robot goes from (1,1) to (0,1) and it's still headed to the north, which is make-sense
-    // after iterate one domain value, we have to turn the robot to right using turnRight()
+    // then, backtracking(), also at this time, we have to move the point to new point for next calculation of domain values // *****
+    // then, to remove the assignment, use goBack() // *****
+    // after iterate one domain value(right before ending the iteration), we have to turn the robot to right using turnRight() // *****
     // this can be done by the following:
     /*
         for (int i = 0; i < 4; i++) {
-            int newD = (d + i) % 4;
+            int newD = (d + i) % 4; // *****
             int newRow = row + directions[newD][0];
             int newCol = col + directions[newD][1];
 
@@ -61,7 +71,7 @@ public class RobotRoomCleaner {
     /*
     // going clockwise : 0: 'up', 1: 'right', 2: 'down', 3: 'left'
     private int[][] directions = new int[][]{{-1, 0}, {0, 1}, {1, 0}, {0, -1}};
-    private Set<Pair<Integer, Integer>> visited = new HashSet();
+    private Set<Pair<Integer, Integer>> visited = new HashSet(); // *****
     private Robot robot;
 
     public void cleanRoom(Robot robot) {
@@ -81,7 +91,7 @@ public class RobotRoomCleaner {
             if (!visited.contains(new Pair<>(newRow, newCol)) && robot.move()) { // 2nd. if it is consistent
                 backtrack(newRow, newCol, newD); // 3rd. assign the value to assignment, and move the point corresponding to the value
                 goBack();
-                //visited.remove(new Pair<>(row, col)); // cuz clean duplicated zone -> time complexity increased.
+                //visited.remove(new Pair<>(row, col)); // cuz clean all possible area once like dfs // *****
             }
 
             robot.turnRight();
@@ -95,5 +105,5 @@ public class RobotRoomCleaner {
         robot.turnRight();
         robot.turnRight();
     }
-    */
+     */
 }
