@@ -4,10 +4,12 @@ public class NumberOfIslands {
     // DFS:
     // T.C: O(M*N) where M is the number of rows and N is the number of columns
     // S.C: O(M*N)
-    // Treat the 2d grid map as an undirected graph and there is an edge between two horizontally or vertically adjacent nodes of value '1'
+    // Treat the 2d grid map as an undirected graph and there is an edge between two horizontally or vertically adjacent nodes
+    // in each grid, '0' means not a node, '1' means a node
+    // when we do dfs, we need to mark the node visited -> use grid, denote '0' when visited
     // Linear scan the 2d grid map, if a node contains a '1', then it is a root node that triggers a Depth First Search.
-    // During DFS, every visited node should be set as '0' to mark as visited node.
     // Count the number of root nodes that trigger DFS, this number would be the number of islands
+    // Use new version: there is a reason -> Word Search
     private int count = 0;
 
     public int numIslands(char[][] grid) {
@@ -24,8 +26,26 @@ public class NumberOfIslands {
         }
         return count;
     }
-
+    /*
+    new ver.
+    */
     public void dfs(char[][] grid, int rowLen, int colLen, int row, int col) {
+        if(row < 0 || row >= rowLen || col < 0 || col >= colLen || grid[row][col] == '0')
+            return;
+
+        grid[row][col] = '0';
+
+        int[][] dirs = {{-1, 0}, {0, 1}, {1, 0}, {0, -1}};
+        for(int i = 0; i < 4; i++) {
+            int newRow = row + dirs[i][0];
+            int newCol = col + dirs[i][1];
+
+            dfs(grid, rowLen, colLen, newRow, newCol);
+        }
+    }
+    /*
+    orig ver.
+    public void dfs2(char[][] grid, int rowLen, int colLen, int row, int col) {
         if(grid[row][col] == '0')
             return;
 
@@ -42,4 +62,5 @@ public class NumberOfIslands {
             }
         }
     }
+    */
 }

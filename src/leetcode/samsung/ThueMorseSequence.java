@@ -1,13 +1,6 @@
-package com.company;
-
-import java.util.*;
-
-
-public class Main {
-    // private
-
-
-    // main
+package leetcode.samsung;
+// https://www.geeksforgeeks.org/thue-morse-sequence/#:~:text=Thue%E2%80%93Morse%20sequence%2C%20or%20Prouhet,the%20sequence%20obtained%20so%20far
+public class ThueMorseSequence {
     public static void main(String[] args) {
         int n = 3;
         String res = "0";
@@ -32,12 +25,5 @@ public class Main {
         }
         return res;
     }
-
 }
-
-
-
-
-
-
 
